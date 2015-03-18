@@ -1,0 +1,54 @@
+.header
+  text-align: center
+
+  .logo
+    a
+      +inline-block()
+      +unstyled-link
+      +rhythm(1,0,0,1)
+      +adjust-font-size-to(32px)
+
+  .menu-btn
+    +unstyled-link
+    +link-colors($color-black, $color-black-light)
+    display: block
+    position: relative
+    z-index: 10
+    +padding-trailer(.25)
+
+  .nav
+    +pie-clearfix
+    margin: 0 -24px
+    padding: 0
+    list-style: none
+
+    li
+      a
+        +unstyled-link
+        +link-colors($color-black, $color-black-light)
+        display: block
+        +padding-leader(.25)
+        +padding-trailer(.25)
+        border-top: 1px solid $color-gray-light
+
+
+  +at-breakpoint($pad)
+    .menu-btn
+      display: none
+
+    .nav
+      +pie-clearfix
+      margin: 0
+
+      &.collapse
+        display: block
+        height: auto !important
+
+      li
+        +box-sizing(border-box)
+        float: left
+        width: 20%
+
+        a
+          border: none
+
