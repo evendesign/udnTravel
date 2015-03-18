@@ -1,0 +1,79 @@
+//
+// slim markup:
+// button.btn / a.btn
+//
+// modifiers:
+// .btn_action / .btn_danger
+//
+// state:
+// .is_disabled
+//
+// ===========
+
+$btn-padding: 4px 24px
+$btn-border-radius: $global-radius-width
+$btn-font-size: 15px
+
+$btn-color: white
+$btn-bg-color: #c1c1c1
+$btn-hover-bg-color: lighten($btn-bg-color, 5%)
+
+$btn-disabled-color: darken($btn-color, 5%)
+$btn-disabled-bg-color: lighten($btn-bg-color, 5%)
+
+$btn-action-bg-color: #444
+$btn-action-hover-bg-color: lighten($btn-action-bg-color, 15%)
+
+$btn-danger-bg-color: #a00
+$btn-danger-hover-bg-color: #b11
+
+
+// 重置 button 樣式
+%btn
+  margin-bottom: 0 // For input.btn
+  padding: $btn-padding
+  border: none
+  @include border-radius($btn-border-radius)
+  @include adjust-font-size-to($btn-font-size)
+  background-image: none // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  text-align: center
+  text-shadow: none
+  cursor: pointer
+  @extend %subpixel
+  outline: none
+  @include nowrap
+  @include user-select(none)
+
+  &:hover
+    text-decoration: none
+
+.btn
+  @extend %btn
+  color: $btn-color
+  background-color: $btn-bg-color
+
+  &:hover
+    background-color: $btn-hover-bg-color
+
+  &:disabled ,&.is-disabled
+    color: $btn-disabled-color
+    background-color: $btn-disabled-bg-color
+    cursor: default
+
+
+.btn_action
+  @extend %btn
+  color: $btn-color
+  background-color: $btn-action-bg-color
+
+  &:hover
+    background-color: $btn-action-hover-bg-color
+
+
+.btn_danger
+  @extend %btn
+  color: $btn-color
+  background-color: $btn-danger-bg-color
+
+  &:hover
+    background-color: $btn-danger-hover-bg-color
