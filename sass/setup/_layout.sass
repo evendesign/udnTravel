@@ -11,13 +11,13 @@ $pad            : 8
 $desktop        : 12
 
 // page-container
-$page-container: ".page"
+$page-container: ".container"
 
 // debug layout
 // @import layout-debug
 
 // ---- container setting ----
-#{$page-container}
+#{$page-container}, %container
   +pie-clearfix
   +container($phone, $pad, $desktop)
   max-width: none
@@ -25,3 +25,12 @@ $page-container: ".page"
     padding: 0 48px
   +at-breakpoint($desktop)
     padding: 0 96px
+
+body
+  background-color: #F9F3EF
+
+.wrap
+  max-width: 1280px
+  margin-left: auto
+  margin-right: auto
+  background-color: white

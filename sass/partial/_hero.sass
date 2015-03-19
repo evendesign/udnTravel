@@ -1,0 +1,53 @@
+.hero
+  position: relative
+
+  .hero-slider-for
+
+  .hero-slider-nav-wrap
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+
+  .hero-slider-nav
+    overflow: hidden
+    position: relative
+    background-color: rgba(255,255,255,.5)
+
+    .slick-list
+      width: 80%
+      margin: 0 auto
+
+    .slick-prev, .slick-next
+      +reset-box-model
+      position: absolute
+      top: 0
+      bottom: 0
+      width: 10%
+      margin: 12px 0
+      background-color: rgba(0,0,0,.5)
+      background-position: center center
+      background-repeat: no-repeat
+      outline: none
+      +transition(background-color .25s)
+
+
+      &:hover
+        background-color: rgba(0,0,0,.75)
+
+    .slick-prev
+      +hide-text()
+      left: -6px
+      background-image: none, url("/images/slider-prev.svg")
+      background-image: url("/images/slider-prev.png")
+
+    .slick-next
+      +hide-text()
+      right: -6px
+      background-image: none, url("/images/slider-next.svg")
+      background-image: url("/images/slider-next.png")
+
+
+
+    .hero-photo
+      padding: 12px 6px
