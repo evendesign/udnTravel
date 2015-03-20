@@ -1,0 +1,115 @@
+.travel-item
+  +pie-clearfix
+  position: relative
+
+  .travel-photo
+
+    img
+      display: block
+
+
+  .travel-info-wrap
+    position: relative
+    overflow: hidden
+
+    .info-background
+      position: absolute
+      top: -100px
+      left: -100px
+      right: -100px
+      bottom: -100px
+      +filter(blur(100px))
+      background-position: center center
+
+    .info-mask
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: rgba(255,255,255,.1)
+      background-image: url("/images/travel-bg-noise.png")
+      background-repeat: repeat
+
+    .travel-info
+      position: relative
+      z-index: 10
+      padding: 24px
+      text-align: center
+      color: white
+
+      .title
+        +adjust-font-size-to(18px, 1)
+
+      .date
+        +adjust-font-size-to(13px)
+
+      .type
+        position: relative
+
+        img
+          display: block
+          margin: rhythm(.5) auto
+
+        &:before, &:after
+          content: ""
+          position: absolute
+          top: 49%
+          width: 42%
+          width: calc(50% - 24px)
+          height: 1px
+          background-color: rgba(255,255,255,.25)
+
+        &:before
+          left: 0
+
+        &:after
+          right: 0
+
+      .description
+        +adjust-font-size-to(13px, .75)
+
+      .btn.enter
+        +inline-block()
+
+  +at-breakpoint($pad)
+    .travel-info-wrap
+
+      .travel-info
+        padding: 48px 72px
+
+        .title
+          +adjust-font-size-to(24px, 1.5)
+
+        .date
+          +adjust-font-size-to(13px)
+
+        .description
+          +adjust-font-size-to(15px)
+
+  +at-breakpoint($desktop)
+    .travel-photo
+      float: left
+      width: 60%
+
+    .travel-info-wrap
+      overflow: hidden
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      width: 40%
+
+      .travel-info
+        position: absolute
+        top: 50%
+        padding: 0 48px
+        +translateY(-50%)
+
+    &:nth-child(even)
+      .travel-photo
+        float: right
+
+      .travel-info-wrap
+        left: 0
+        right: auto

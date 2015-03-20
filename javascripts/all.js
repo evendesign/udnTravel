@@ -14,6 +14,14 @@ if ( $('.hero').length != 0 ) {
     dots: false,
     centerMode: true,
     focusOnSelect: true,
-    autoplay: true
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 3,
+        }
+      }
+    ]
   });
 }

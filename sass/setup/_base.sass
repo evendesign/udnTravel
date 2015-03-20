@@ -58,7 +58,6 @@ body
 #{headings()}
   +reset-box-model
   font-weight: normal
-  +trailer(1)
 
 h1
   +adjust-font-size-to(32px, 1.5)
@@ -173,3 +172,7 @@ hr, .divider
 
 img
   max-width: 100%
+
+article
+  #{headings()}, img
+    +trailer()
