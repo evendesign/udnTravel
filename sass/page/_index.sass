@@ -1,0 +1,150 @@
+.travel-record-title
+  padding: rhythm(2)
+  text-align: center
+  background-color: $color-blue-dark
+
+  span
+    display: block
+    +adjust-font-size-to(36px)
+    +trailer(.5)
+    color: $color-blue
+
+  .btn
+    +inline-block()
+    +unstyled-link
+    color: white
+
+.record-wrap
+  +pie-clearfix
+
+  .record-item
+    +pie-clearfix
+    +unstyled-link
+    display: block
+    float: left
+    position: relative
+
+    &:hover
+      .record-info-wrap
+        .info-mask
+          background-color: rgba(255,255,255,.2)
+
+    .record-photo
+      img
+        display: block
+
+
+    .record-info-wrap
+      position: relative
+      overflow: hidden
+
+      .info-background
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-position: center center
+
+      .info-mask
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: rgba(255,255,255,.1)
+        background-image: url("/images/travel-bg-noise.png")
+        background-repeat: repeat
+        +transition(background-color .25s)
+
+      .record-info
+        position: relative
+        z-index: 10
+        padding: 18px 12px
+        color: white
+
+        .title
+          +adjust-font-size-to(16px)
+          +ellipsis
+
+        .date
+          +adjust-font-size-to(13px)
+
+        .type
+          float: left
+
+          img
+            display: block
+            margin: rhythm(.3) rhythm(.5)
+
+        .description
+          +adjust-font-size-to(13px, .75)
+
+        .btn.enter
+          +inline-block()
+
+.fb-page
+  display: block
+  padding: rhythm(2)
+  +adjust-font-size-to(36px)
+  text-align: center
+  background-color: $color-blue-dark
+
+  span
+    +inline-block()
+    color: $color-black-a75
+
+  span.fb-page-name
+    padding: 0 12px
+    color: white
+    font-weight: bold
+
+
++at-breakpoint($pad)
+  .travel-record-title
+    position: relative
+
+    span
+      +inline-block()
+      +trailer(0)
+
+    .btn
+      position: absolute
+      top: 48px
+      right: 48px
+
+  .record-wrap
+    &:nth-child(odd)
+      .record-item
+        &.big
+          float: right
+
+    .record-item
+      width: 25%
+
+      .record-info-wrap
+        .record-info
+          padding: 12px
+
+          .type
+            img
+              margin: rhythm(.25) rhythm(.5)
+
+      &.big
+        width: 50%
+
+        .record-info-wrap
+
+          .record-info
+            padding: 42px 12px
+
+            .title
+              +adjust-font-size-to(24px, 1.5)
+
+            .date
+              +adjust-font-size-to(15px)
+
+            .type
+              img
+                margin: rhythm(.5)
+
