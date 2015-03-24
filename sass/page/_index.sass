@@ -21,8 +21,7 @@
     +pie-clearfix
     +unstyled-link
     display: block
-    float: left
-    position: relative
+    margin: 6px
 
     &:hover
       .record-info-wrap
@@ -68,6 +67,7 @@
           +ellipsis
 
         .date
+          overflow: hidden
           +adjust-font-size-to(13px)
 
         .type
@@ -84,15 +84,21 @@
           +inline-block()
 
 .fb-page
+  $fb-color-blue: #4A6CA0
   display: block
   padding: rhythm(2)
-  +adjust-font-size-to(36px)
+  +adjust-font-size-to(32px)
   text-align: center
-  background-color: $color-blue-dark
+  background-color: $fb-color-blue
+  +transition(background-color .25s)
+
+  &:hover
+    +unstyled-link
+    background-color: lighten($fb-color-blue, 3%)
 
   span
-    +inline-block()
-    color: $color-black-a75
+    display: block
+    color: $color-white-a35
 
   span.fb-page-name
     padding: 0 12px
@@ -120,7 +126,9 @@
           float: right
 
     .record-item
+      float: left
       width: 25%
+      margin: 0
 
       .record-info-wrap
         .record-info
@@ -147,4 +155,10 @@
             .type
               img
                 margin: rhythm(.5)
+
+  .fb-page
+    +adjust-font-size-to(36px)
+
+    span
+      +inline-block()
 

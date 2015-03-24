@@ -3,6 +3,7 @@
   +unstyled-link
   display: block
   position: relative
+  margin: 6px
 
   &:hover
     +unstyled-link
@@ -81,6 +82,8 @@
         +inline-block()
 
   +at-breakpoint($pad)
+    margin: 0
+
     .travel-info-wrap
       .travel-info
         padding: 48px 72px
