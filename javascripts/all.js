@@ -1,15 +1,14 @@
-$('.travel-photo-img').load(function(){
-  var targetImage = new Image;
-  var targetTag = $(this);
-  var imgSource = targetTag.attr('src');
-  targetImage.src = imgSource;
-  var colorThief = new ColorThief();
-  var color = colorThief.getColor(targetImage);
-  targetTag.parent().next().children('.travel-info').children('.enter').css('background-color', "rgb(" + color + ")");
-});
-
-
 $(function(){
+  $('.travel-photo-img').load(function(){
+    var targetImage = new Image;
+    var targetTag = $(this);
+    var imgSource = targetTag.attr('src');
+    targetImage.src = imgSource;
+    var colorThief = new ColorThief();
+    var color = colorThief.getColor(targetImage);
+    targetTag.parents('.travel-item').find('.enter').css('background-color', "rgb(" + color + ")");
+  });
+
   if ( $('.hero').length != 0 ) {
      $('.hero-slider-for').slick({
       slidesToShow: 1,
@@ -38,3 +37,5 @@ $(function(){
     });
   }
 });
+
+
