@@ -3,15 +3,15 @@
     .travel-item
       .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-5.jpg"
       .travel-info-wrap
+        .badge.follow
         .info-background style="background-image: url('/images/hero-photo/slider-5-blur.jpg')"
         .info-mask
         .travel-info
-          .badge
           h2.title 澄金秋彩紐西蘭南島攝影漫遊
           .date 2015/05/23
           .type: img src="http://placehold.it/32x32"
           p.description 由已有50年以上成功歷史的美國白鹿青少年領導訓練營精心打造，以七天的領導力訓練課程為活動主軸，透過實地任務，團體、分組作戰等遊戲環節，在反覆演練中挖掘並激發孩子潛在的領導力
-          .btn.enter 我要報名
+          a.btn.enter href="#" 我要報名
           .sns-share
             a.mail href="#"
             a.facebook href="#"
@@ -19,10 +19,18 @@
 
   .travel-summary
     ul.summary-menu
-      li.active: a data-toggle="tab" href="#overview" 旅程總覽
-      li: a data-toggle="tab" href="#flight" 航班
-      li: a data-toggle="tab" href="#fee" 團費
-      li: a data-toggle="tab" href="#notice" 貼心提醒
+      li.active: a data-toggle="tab" href="#overview"
+        img.icon src="http://placehold.it/32x32"
+        .span 旅程總覽
+      li: a data-toggle="tab" href="#flight"
+        img.icon src="http://placehold.it/32x32"
+        .span 航班
+      li: a data-toggle="tab" href="#fee"
+        img.icon src="http://placehold.it/32x32"
+        .span 團費
+      li: a data-toggle="tab" href="#notice"
+        img.icon src="http://placehold.it/32x32"
+        .span 貼心提醒
 
     .tab-content.summary-content
       #overview.tab-pane.fade.in.active = zh_lorem_paragraphs 2
@@ -41,22 +49,24 @@
 
   .travel-related-item
     h2.block-title 活動集錦
-    - 4.times do |i|
-      .related-item-wrap
-        .travel-item
-          .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
-          .travel-info-wrap
-            .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
-            .info-mask
-            .travel-info
-              .badge
-              h2.title 澄金秋彩紐西蘭南島攝影漫遊
-              .date 2015/05/23
+    .related-item-list
+      - 4.times do |i|
+        .related-item-wrap
+          a.travel-item href="/record/travel-record.html"
+            .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
+            .travel-info-wrap
+              .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
+              .info-mask
+              .travel-info
+                .badge
+                h2.title 澄金秋彩紐西蘭南島攝影漫遊
+                .date 2015/05/23
 
   .travel-related-link
     h2.block-title 相關連結
-    -4.times do |i|
-      .related-item-wrap
-        a.link-item href="#"
-          .link-title = zh_lorem_words(7+rand(7))
-          .link-description = zh_lorem_words(15+rand(30))
+    .related-item-list
+      - 4.times do |i|
+        .related-item-wrap
+          a.link-item href="#"
+            .link-title = zh_lorem_words(7+rand(7))
+            .link-description = zh_lorem_words(15+rand(30))

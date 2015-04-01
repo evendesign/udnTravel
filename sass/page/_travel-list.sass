@@ -1,0 +1,25 @@
+.travel-list
+  @extend %container
+  +pie-clearfix
+
+  .travel-list-item
+    .travel-item
+      margin: 16px 0
+
+      .travel-info-wrap
+        .travel-info
+          padding: 24px
+
+          .title
+            +trailer(.25)
+            +adjust-font-size-to(18px)
+
+  @include at-breakpoint($pad)
+    .travel-list-item
+      +box-sizing(border-box)
+      float: left
+      width: 50%
+      padding: 12px
+
+      .travel-item
+        margin: 0

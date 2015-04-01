@@ -1,0 +1,61 @@
+$menu-background: #F6F7F8
+$menu-active-background: #E0E0E3
+.summary-menu
+  margin: 0
+  padding: 0
+  font-size: 0
+  text-align: center
+  list-style: none
+  background-color: $menu-background
+
+  li
+    +inline-block()
+    position: relative
+    width: 25%
+
+    &.active
+      background-color: $menu-active-background
+      &:after
+        content: ""
+        position: absolute
+        left: 50%
+        bottom: 0
+        margin-left: -12px
+        border: 12px solid transparent
+        border-bottom: 12px solid #565151
+
+    img
+      width: 32px
+      height: 32px
+
+    a
+      display: block
+      +unstyled-link
+      padding: 36px 0
+      +adjust-font-size-to(16px)
+
+.summary-content
+  +rhythm(0,2,2,0)
+  color: white
+  background-color: #565151
+
+  .tab-pane
+    @extend %container
+    max-width: 720px
+    +adjust-font-size-to(16px)
+
+  .summary-content-dl
+    +leader(2)
+    text-align: center
+
++at-breakpoint($pad)
+  .summary-menu
+    li
+      width: 15%
+
+      a
+        padding: 48px 0
+
+  .summary-content
+    .tab-pane
+      +adjust-font-size-to(18px, 1.2)

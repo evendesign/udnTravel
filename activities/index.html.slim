@@ -1,0 +1,18 @@
+.page-header
+  .page-header-inner
+    h2.page-title
+      span.ch 最新活動
+      span.en activities
+
+.travel-list
+  - 8.times do |i|
+    .travel-list-item
+      a.travel-item href="/record/travel-record.html"
+        .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
+        .travel-info-wrap
+          .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
+          .info-mask
+          .travel-info
+            .badge
+            h2.title 澄金秋彩紐西蘭南島攝影漫遊
+            .date 2015/05/23

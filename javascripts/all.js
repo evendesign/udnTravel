@@ -1,14 +1,4 @@
 $(function(){
-  $('.travel-photo-img').load(function(){
-    var targetImage = new Image;
-    var targetTag = $(this);
-    var imgSource = targetTag.attr('src');
-    targetImage.src = imgSource;
-    var colorThief = new ColorThief();
-    var color = colorThief.getColor(targetImage);
-    targetTag.parents('.travel-item').find('.enter').css('background-color', "rgb(" + color + ")");
-  });
-
   if ( $('.hero').length != 0 ) {
      $('.hero-slider-for').slick({
       slidesToShow: 1,
@@ -36,6 +26,27 @@ $(function(){
       ]
     });
   }
+
+  $('.travel-photo-img').each(function(){
+    var targetImage = new Image;
+    var targetTag = $(this);
+    var imgSource = targetTag.attr('src');
+    targetImage.src = imgSource;
+    var colorThief = new ColorThief();
+    var color = colorThief.getColor(targetImage);
+    targetTag.parents('.travel-item').find('.enter').css('background-color', "rgb(" + color + ")");
+  });
+
+  $('.badge').on('click', function(){
+    $(this).toggleClass('active');
+  });
+
+  $('.record-photo-wrap').magnificPopup({
+    type:'image',
+    removalDelay: 300,
+    mainClass: 'mfp-fade'
+  });
+
 });
 
 

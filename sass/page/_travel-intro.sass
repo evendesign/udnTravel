@@ -22,52 +22,36 @@
 
         .mail, .facebook, .googleplus
           +inline-block()
-          margin: 0 6px
+          margin: 0 12px
           opacity: .75
           +transition(opacity .25s)
 
           &:hover
             opacity: 1
 
+      &.record
+        .travel-info-wrap
+          .info-mask
+            background-color: rgba(255,255,255,.5)
+
+        &:hover
+          .travel-info-wrap
+            .info-mask
+              background-color: rgba(255,255,255,.5)
+
+        .travel-info-wrap
+          .travel-info
+            color: black
+
+            .type
+              &:before, &:after
+                background-color: rgba(0,0,0,.25)
+
+            .btn.enter
+              color: $color-black-a50
+              background-color: rgba(255,255,255,.75) !important
+
   .travel-summary
-    .summary-menu
-      margin: 0
-      padding: 0
-      text-align: center
-      list-style: none
-
-      li
-        +inline-block()
-        position: relative
-
-        &.active
-          &:after
-            content: ""
-            position: absolute
-            left: 50%
-            bottom: 0
-            margin-left: -12px
-            border: 12px solid transparent
-            border-bottom: 12px solid #565151
-
-        a
-          +inline-block()
-          +unstyled-link
-          padding: 48px 12px
-
-    .summary-content
-      +rhythm(0,2,2,0)
-      color: white
-      background-color: #565151
-
-      .tab-pane
-        @extend %container
-        max-width: 720px
-        +adjust-font-size-to(16px)
-
-      .summary-content-dl
-        +leader(2)
-        text-align: center
 
   .block-title
     +trailer(2)
@@ -90,18 +74,20 @@
     &:after
       right: -56px
 
-  .travel-highlight, .travel-related-item, .travel-related-link
+  .travel-record-photo, .travel-highlight, .travel-related-item, .travel-related-link
     @extend %container
     +rhythm(2,0,0,2)
     max-width: 960px
 
   .travel-related-item
+
+  .related-item-list
     +pie-clearfix
 
   .related-item-wrap
-    padding: 6px 0
-
     .travel-item
+      margin: 16px 0
+
       .travel-info-wrap
         .travel-info
           padding: 24px
@@ -111,6 +97,8 @@
             +adjust-font-size-to(18px)
 
     .link-item
+      display: block
+      +trailer(.5)
       text-decoration: none
 
       .link-title
@@ -123,6 +111,30 @@
         height: 48px
         +adjust-font-size-to(15px)
         color: $color-black
+
+  .travel-record-photo
+    .record-photo-list
+      margin: 0 -6px
+
+    .record-photo-wrap
+      @include box-sizing(border-box)
+      display: block
+      float: left
+      width: 50%
+      padding: 6px
+
+    .record-photo
+      display: block
+      position: relative
+      overflow: hidden
+      padding-bottom: 80%
+
+      img
+        max-width: 150%
+        position: absolute
+        top: 0
+        left: 50%
+        +translateX(-50%)
 
   .travel-highlight
     .highlight-item
@@ -138,24 +150,23 @@
       .highlight-description
         +adjust-font-size-to(16px)
 
+
   +at-breakpoint($pad)
-    .travel-summary
-      .summary-menu
-        li
-          a
-            padding: 72px 48px
-
-      .summary-content
-        .tab-pane
-          +adjust-font-size-to(18px, 1.2)
-
-    .travel-highlight, .travel-related-item, .travel-related-link
+    .travel-record-photo, .travel-highlight, .travel-related-item, .travel-related-link
       +rhythm(4,0,0,4)
+
+    .travel-record-photo
+      .record-photo-wrap
+        width: 33.333%
+
 
     .travel-highlight
       .highlight-item
         .highlight-description
           +adjust-font-size-to(18px, 1.2)
+
+    .related-item-list
+      margin: 0 -12px
 
     .related-item-wrap
       +box-sizing(border-box)
@@ -163,7 +174,15 @@
       width: 50%
       padding: 12px
 
-  @include at-breakpoint($desktop)
+      .travel-item
+        margin: 0
+
+
+  +at-breakpoint($desktop)
+    .travel-record-photo
+      .record-photo-wrap
+        width: 25%
+
     .travel-highlight
       .highlight-item
         .highlight-photo
