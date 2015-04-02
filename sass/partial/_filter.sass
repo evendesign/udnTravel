@@ -1,5 +1,7 @@
 .itinerary-type
-  +rhythm(0,.5,.5,0)
+  max-width: 1088px
+  margin: 0 auto
+  padding: rhythm(.5)
   +nowrap
   text-align: center
   overflow-x: scroll
@@ -11,6 +13,12 @@
     padding: rhythm(1)
     text-align: center
 
+    &:hover
+      background-color: $color-black-a05
+
+    &.active
+      background-color: $color-black-a10
+
     .icon
       img
         width: 48px
@@ -20,10 +28,9 @@
       +adjust-font-size-to(15px)
 
   +at-breakpoint($pad)
-    +rhythm(0,1,1,0)
 
     .type-item
-      padding: rhythm(1.5)
+      padding: rhythm(1) rhythm(1.5)
 
       .icon
         img
@@ -32,4 +39,60 @@
 
       .name
         +leader(.5)
-        +adjust-font-size-to(18px)
+
+$travel-filter-bg: #F6F7F8
+.travel-filter
+  position: relative
+  background-color: $travel-filter-bg
+
+  .extra-btn
+    position: absolute
+    bottom: 0
+    left: 50%
+
+  #travel-extra-option
+    max-width: 1088px
+    margin: 0 auto
+    padding: 0 rhythm(.5)
+
+    .travel-time, .travel-location
+      position: relative
+      +rhythm(0,.25,.25,0)
+      border-top: 1px solid $color-black-a10
+
+      .label
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 10
+        +rhythm(0,.25,.25,0)
+        padding-right: 12px
+        font-weight: bold
+        background-color: $travel-filter-bg
+
+      .option-set
+        display: block
+        padding-left: 48px
+        +nowrap
+        overflow-x: scroll
+        -webkit-overflow-scrolling: touch
+
+      .option
+        +inline-block()
+        padding: 0 12px
+
+        &:hover
+          background-color: $color-black-a05
+
+        &.active
+          background-color: $color-black-a10
+
+.find-travel
+  max-width: 1088px
+  margin: 0 auto
+  padding: 0 rhythm(.5)
+  text-align: right
+
+  .extra-btn
+    padding: 6px 32px
+    background-color: $travel-filter-bg

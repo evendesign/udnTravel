@@ -1,5 +1,5 @@
 .page-header
-  background: url("/images/hero-photo/slider-4-blur.jpg")
+  background-position: center
 
   .page-header-inner
     @extend %container
@@ -14,5 +14,10 @@
       +adjust-font-size-to(36px)
 
     .en
+      position: relative
       display: block
-      +adjust-font-size-to(20px)
+      +adjust-font-size-to(16px)
+
+      &:before, &:after
+        content: " — "
+        opacity: .5

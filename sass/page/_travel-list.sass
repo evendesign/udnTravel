@@ -1,10 +1,14 @@
 .travel-list
-  @extend %container
+  max-width: 1088px
+  margin: rhythm(.25) auto
   +pie-clearfix
+
+  .travel-list-inner
+    margin: 0 6px
 
   .travel-list-item
     .travel-item
-      margin: 16px 0
+      margin: 6px 0
 
       .travel-info-wrap
         .travel-info
@@ -14,12 +18,16 @@
             +trailer(.25)
             +adjust-font-size-to(18px)
 
-  @include at-breakpoint($pad)
+  +at-breakpoint($pad)
     .travel-list-item
       +box-sizing(border-box)
       float: left
       width: 50%
-      padding: 12px
+      padding: 6px
 
       .travel-item
         margin: 0
+
+  +at-breakpoint($desktop)
+    .travel-list-inner
+      margin: 0 -6px

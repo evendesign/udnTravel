@@ -14,6 +14,7 @@
 
 $pagination-color: #444 !default
 $pagination-bg-color: transparent !default
+$pagination-border-color: #DDD !default
 
 $pagination-hover-color: white !default
 $pagination-hover-bg-color: #444 !default
@@ -25,9 +26,11 @@ $pagination-disable-color: lighten($pagination-color, 30%) !default
 $pagination-disable-bg-color: $pagination-bg-color !default
 
 .pagination
-  @include pie-clearfix
-  @include reset-box-model
+  +pie-clearfix
+  +reset-box-model
+  +rhythm(2,0,0,2)
   list-style: none
+  text-align: center
 
   li
     display: inline-block
@@ -35,10 +38,11 @@ $pagination-disable-bg-color: $pagination-bg-color !default
   a, span
     display: block
     padding: rhythm(0.125) rhythm(0.5)
+    text-align: center
+    +adjust-font-size-to(15px)
     color: $pagination-color
     background-color: $pagination-bg-color
-    text-align: center
-    @include adjust-font-size-to(15px)
+    border: 1px solid $pagination-border-color
 
     &:hover
       text-decoration: none
@@ -55,7 +59,7 @@ $pagination-disable-bg-color: $pagination-bg-color !default
       cursor: default
 
 
-  @include at-breakpoint($pad)
+  +at-breakpoint($pad)
     a, span
-      @include adjust-font-size-to(16px)
+      +adjust-font-size-to(16px)
 

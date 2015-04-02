@@ -1,18 +1,78 @@
-.page-header
+.page-header style="background-image: url('/images/hero-photo/slider-7-blur.jpg')"
   .page-header-inner
     h2.page-title
       span.ch 最新活動
-      span.en activities
+      span.en Activities
+
+.travel-filter
+  .itinerary-type
+    a.type-item.active href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 所有旅程
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 私房小品
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 攝影之旅
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 音樂饗宴
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 有機美食
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 文創設計
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 歷史建築
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 主題營隊
+
+  .nav.collapse#travel-extra-option
+    .travel-time
+      .label 時間
+      .option-set
+        .option.active 1～2月
+        .option 3～4月
+        .option 5～6月
+        .option 7～8月
+        .option 9～10月
+        .option 11～12月
+    .travel-location
+      .label 地點
+      .option-set
+        .option.active 台北
+        .option 倫敦
+        .option 巴黎
+        .option 柏林
+        .option 東京
+        .option 紐約
+
+.find-travel
+  a.extra-btn data-toggle="collapse" href="#travel-extra-option" 找旅程
 
 .travel-list
-  - 8.times do |i|
-    .travel-list-item
-      a.travel-item href="/record/travel-record.html"
-        .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
-        .travel-info-wrap
-          .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
-          .info-mask
-          .travel-info
-            .badge
-            h2.title 澄金秋彩紐西蘭南島攝影漫遊
-            .date 2015/05/23
+  .travel-list-inner
+    - 10.times do |i|
+      .travel-list-item
+        a.travel-item href="/activities/travel-intro.html"
+          .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
+          .travel-info-wrap
+            .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
+            .info-mask
+            .travel-info
+              .badge
+              h2.title 澄金秋彩紐西蘭南島攝影漫遊
+              .date 2015/05/23
+
+= render "/partial/pagination"
