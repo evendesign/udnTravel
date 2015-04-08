@@ -10,12 +10,12 @@
 //
 // ===========
 
-$btn-padding: 12px 48px
+$btn-padding: 12px 72px
 $btn-border-radius: $global-radius-width
 $btn-font-size: 15px
 
 $btn-color: white
-$btn-bg-color: $color-black-a50
+$btn-bg-color: $color-black-a75
 $btn-hover-bg-color: lighten($btn-bg-color, 5%)
 
 $btn-disabled-color: darken($btn-color, 5%)
@@ -30,6 +30,7 @@ $btn-danger-hover-bg-color: #b11
 
 // 重置 button 樣式
 %btn
+  +reset-box-model
   margin-bottom: 0 // For input.btn
   padding: $btn-padding
   text-align: center
@@ -46,6 +47,7 @@ $btn-danger-hover-bg-color: #b11
   &:hover
     +unstyled-link
     text-decoration: none
+    color: $btn-color
 
 .btn
   @extend %btn

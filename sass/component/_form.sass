@@ -1,11 +1,11 @@
 // input variable
 $form-height: 32px
 $form-border-width: 1px
-$form-border-color: #ddd
+$form-border-color: #ccc
 $form-padding: 5px 6px
 $form-radius-width: $global-radius-width
 $form-bg-color: white
-$form-color: #777
+$form-color: #555
 $form-placeholder-color: #999
 $form-font-size: 16px
 
@@ -31,7 +31,8 @@ $form-tip-color: #999
   input[type="search"],
   input[type="tel"],
   input[type="number"],
-  input[type="datetime"] { -webkit-appearance: none }
+  input[type="datetime"]
+    -webkit-appearance: none
 
   textarea,
   select,
@@ -48,17 +49,18 @@ $form-tip-color: #999
   input[type="time"],
   input[type="url"],
   input[type="week"]
-    @include box-sizing(border-box)
+    +box-sizing(border-box)
     border: $form-border-width solid $form-border-color
     padding: $form-padding
     height: $form-height
-    @include border-radius($form-radius-width)
+    +border-radius($form-radius-width)
     color: $form-color
     background-color: $form-bg-color
-    @include input-placeholder-color($form-placeholder-color)
-    @include box-shadow(none)
+    +input-placeholder-color($form-placeholder-color)
+    +box-shadow(none)
     outline: none
     max-width: 100% // Responsiveness: Sets a maximum width relative to the parent to scale on narrower viewports
+    width: 100%
 
     &.full-width
       width: 100%
@@ -66,6 +68,12 @@ $form-tip-color: #999
   input[type="file"], select
     cursor: pointer
     outline: none
+
+  input[type="submit"]
+    cursor: pointer
+
+  input[disabled]
+    border: $form-border-width solid lighten($form-border-color, 10%)
 
   textarea
     height: auto // 高度由 rows 屬性決定
@@ -77,41 +85,65 @@ $form-tip-color: #999
 // form 排版
 // =========================================
 
-// 垂直排列（預設排版方式）
+.form
+  max-width: 600px
+  margin: 0 auto
+
+.form-row
+  +pie-clearfix
+
 .form-row + .form-row
-  @include leader(0.5)
+  +leader(.75)
 
 .form-label
   display: block
-  @include adjust-font-size-to($form-label-font-size)
-  @include trailer(0.125)
+  +adjust-font-size-to($form-label-font-size, 1.25)
+  +trailer(0.125)
   color: black
   @extend %subpixel
 
-.form-label_required
-  &:after
-    content: '*'
-    display: inline
-    font-size: $form-label-font-size + 2px
-    line-height: 1
+  &.required
     color: #c00
+
+    &:before
+      content: '*'
+      display: inline
+      font-size: $form-label-font-size + 2px
+      line-height: 1
+      color: #c00
 
 .form-content
   display: block
-  @include adjust-font-size-to($form-content-font-size)
+  +adjust-font-size-to($form-content-font-size)
   color: $form-content-color
+
+  &.buttonbox
+    .btn
+      width: calc(50% - 6px)
+    .btn + .btn
+      margin-left: 12px
+
+  .form-row
+    +leader(0)
+    +adjust-font-size-to($form-content-font-size, 1.25)
+
+  img
+    display: block
+
+.form-content + .form-content
+  +leader(.75)
 
 .form-tip
   display: block
   margin: 0
-  @include adjust-font-size-to($form-tip-font-size)
+  +adjust-font-size-to($form-tip-font-size)
   color: $form-tip-color
 
 .radio-group, .checkbox-group
   display: block
 
   & + &
-    @include leader(0.125)
+    +leader(0.125)
 
 
 .radio, .checkbox
@@ -124,8 +156,15 @@ $form-tip-color: #999
     margin-right: 3px
 
 
++at-breakpoint($pad)
+  .form-label
+    +box-sizing(border-box)
+    float: left
+    width: 30%
+    text-align: right
 
-// 水平排列：
-// 由於在手機版時，表單不適合使用水平排列，
-// 也無法確認在某個版本時，表單的排版就變成水平排列，
-// 所以表單水平排列，就由 partial 的部分在來控制。
+  .form-content
+    +box-sizing(border-box)
+    float: right
+    width: 70%
+    padding-left: 12px

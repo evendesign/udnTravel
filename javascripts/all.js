@@ -27,15 +27,17 @@ $(function(){
     });
   }
 
-  $('.travel-photo-img').each(function(){
-    var targetImage = new Image;
-    var targetTag = $(this);
-    var imgSource = targetTag.attr('src');
-    targetImage.src = imgSource;
-    var colorThief = new ColorThief();
-    var color = colorThief.getColor(targetImage);
-    targetTag.parents('.travel-item').find('.enter').css('background-color', "rgb(" + color + ")");
-  });
+  if ( $('.travel-photo-img').length != 0 ) {
+    $('.travel-photo-img').each(function(){
+      var targetImage = new Image;
+      var targetTag = $(this);
+      var imgSource = targetTag.attr('src');
+      targetImage.src = imgSource;
+      var colorThief = new ColorThief();
+      var color = colorThief.getColor(targetImage);
+      targetTag.parents('.travel-item').find('.enter').css('background-color', "rgb(" + color + ")");
+    });
+  }
 
   $('.badge').on('click', function(){
     $(this).toggleClass('active');
@@ -47,6 +49,14 @@ $(function(){
     mainClass: 'mfp-fade'
   });
 
+
+  $('.othercheckbox').on('click', function(){
+    if ($(this).is(":checked")) {
+      $(this).next('.otherinput').removeAttr('disabled');
+    } else {
+      $(this).next('.otherinput').attr('disabled', true);
+    }
+  })
 });
 
 

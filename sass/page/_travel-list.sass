@@ -1,22 +1,10 @@
 .travel-list
   max-width: 1088px
   margin: rhythm(.25) auto
-  +pie-clearfix
 
   .travel-list-inner
-    margin: 0 6px
+    +pie-clearfix
 
-  .travel-list-item
-    .travel-item
-      margin: 6px 0
-
-      .travel-info-wrap
-        .travel-info
-          padding: 24px
-
-          .title
-            +trailer(.25)
-            +adjust-font-size-to(18px)
 
   +at-breakpoint($pad)
     .travel-list-item
@@ -31,3 +19,12 @@
   +at-breakpoint($desktop)
     .travel-list-inner
       margin: 0 -6px
+
+.travel-list-item
+  .travel-info-wrap
+    .travel-info
+      padding: 24px
+
+      .title
+        +trailer(.25)
+        +adjust-font-size-to(16px)

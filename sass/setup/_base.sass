@@ -173,6 +173,12 @@ hr, .divider
 img
   max-width: 100%
 
-article
-  #{headings()}, img
+article, .article
+  h1, h2, img
     +trailer()
+
+  h3, h4
+    +trailer(.5)
+
+  h5, h6
+    +trailer(.25)

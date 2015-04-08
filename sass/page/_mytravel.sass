@@ -1,0 +1,126 @@
+.mytravel-list
+  position: relative
+  max-width: 1088px
+  margin: 0 auto
+  +pie-clearfix
+  text-align: center
+
+  .list-header
+    position: relative
+    z-index: 10
+    +rhythm(0,2,2,0)
+    +adjust-font-size-to(24px, 1)
+
+    .favorite, .follow
+      +inline-block()
+      position: relative
+      padding-left: 30px
+
+      &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+
+    .favorite:before
+      width: 24px
+      height: 24px
+      background: url("/images/list-title-icon-favorite.svg") no-repeat
+
+    .follow:before
+      width: 24px
+      height: 24px
+      background: url("/images/list-title-icon-follow.svg") no-repeat
+
+  .follow-list
+    +background(linear-gradient(#C5D2D3 0px, #FFFFFF 250px))
+
+  .favorite-list
+    +background(linear-gradient(#D3CCC6 0px, #FFFFFF 250px))
+
+  .update-log
+    margin: -6px 6px 6px
+    padding: 12px 18px
+    text-align: left
+    +adjust-font-size-to(15px, 1.5)
+    color: white
+    background-color: #565151
+
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+
+      li
+        +ellipsis
+        border-top: 1px solid $color-white-a10
+
+        .date
+          display: inline-block
+          padding-right: 6px
+          font-weight: 500
+          color: $color-white-a35
+
+  .empty-item
+    position: relative
+    margin: 0 6px 48px
+    padding: 48px
+    text-align: center
+    +adjust-font-size-to(21px)
+    color: $color-black-a50
+    background-color: white
+    border: 1px solid $color-black-a35
+
+    .empty-follow-icon, .empty-favorite-icon
+      width: 64px
+      height: 64px
+      margin: 12px auto
+
+    .empty-follow-icon
+      background: url("/images/empty-icon-follow.svg") no-repeat
+
+    .empty-favorite-icon
+      background: url("/images/empty-icon-favorite.svg") no-repeat
+
+  +at-breakpoint($pad)
+    .follow-list, .favorite-list
+      +box-sizing(border-box)
+      float: left
+      width: 50%
+
+    .follow-list
+      padding: 0 6px 0 12px
+
+    .favorite-list
+      padding: 0 12px 0 6px
+
+    .follow-list, .favorite-list
+      &:before
+        content: ""
+        position: absolute
+        top: 0
+        width: 60%
+        height: 250px
+
+    .follow-list
+      padding: 0 6px 0 12px
+
+      &:before
+        left: -10%
+        +background(linear-gradient(#C5D2D3 0px, #FFFFFF 250px))
+
+    .favorite-list
+      padding: 0 12px 0 6px
+
+      &:before
+        right: -10%
+        +background(linear-gradient(#D3CCC6 0px, #FFFFFF 250px))
+
+    .travel-list-item
+      margin: 12px 0
+
+    .update-log
+      margin: 0
+
+    .empty-item
+      margin: 0 0 24px

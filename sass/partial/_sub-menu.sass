@@ -22,7 +22,6 @@ $menu-active-background: #E0E0E3
         bottom: 0
         margin-left: -12px
         border: 12px solid transparent
-        border-bottom: 12px solid #565151
 
     img
       width: 32px
@@ -34,10 +33,8 @@ $menu-active-background: #E0E0E3
       padding: 36px 0
       +adjust-font-size-to(16px)
 
-.summary-content
+.tab-content
   +rhythm(0,2,2,0)
-  color: white
-  background-color: #565151
 
   .tab-pane
     @extend %container
@@ -56,6 +53,6 @@ $menu-active-background: #E0E0E3
       a
         padding: 48px 0
 
-  .summary-content
+  .tab-content
     .tab-pane
       +adjust-font-size-to(18px, 1.2)

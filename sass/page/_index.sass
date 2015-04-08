@@ -162,3 +162,13 @@
     span
       +inline-block()
 
++at-breakpoint($desktop)
+  .travel-activities
+    .travel-item
+      &:nth-child(even)
+        .travel-photo
+          float: right
+
+        .travel-info-wrap
+          left: 0
+          right: auto

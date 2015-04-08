@@ -1,0 +1,55 @@
+.page-header style="background-image: url('/images/hero-photo/slider-4-blur.jpg')"
+  .page-header-inner
+    h2.page-title
+      span.ch 活動集錦
+      span.en Record
+
+.travel-filter
+  .itinerary-type
+    a.type-item.active href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 所有旅程
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 私房小品
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 攝影之旅
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 音樂饗宴
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 有機美食
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 文創設計
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 歷史建築
+
+    a.type-item href="#"
+      .icon: img src="http://placehold.it/64x64"
+      .name 主題營隊
+
+.travel-list
+  .travel-list-inner
+    - 10.times do |i|
+      .travel-list-item
+        a.travel-item href="/activities/travel-intro.html"
+          .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
+          .travel-info-wrap
+            .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
+            .info-mask
+            .travel-info
+              h2.title 澄金秋彩紐西蘭南島攝影漫遊
+              .type: img src="http://placehold.it/32x32"
+              .date 2015/05/23
+
+= render "/partial/pagination"
