@@ -86,7 +86,6 @@ $form-tip-color: #999
 // =========================================
 
 .form
-  max-width: 600px
   margin: 0 auto
 
 .form-row
@@ -114,18 +113,31 @@ $form-tip-color: #999
 
 .form-content
   display: block
-  +adjust-font-size-to($form-content-font-size)
+  +adjust-font-size-to($form-content-font-size, 1.25)
   color: $form-content-color
+
+  &.number
+    display: inline-block
+    text-align: right
+
+  &.total
+    text-align: right
+    font-weight: bold
+    color: #C00
 
   &.buttonbox
     .btn
       width: calc(50% - 6px)
+      padding: 12px
     .btn + .btn
       margin-left: 12px
 
   .form-row
     +leader(0)
     +adjust-font-size-to($form-content-font-size, 1.25)
+
+  ul, ol
+    margin: 0
 
   img
     display: block

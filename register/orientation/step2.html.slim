@@ -1,0 +1,96 @@
+.page-header style="background-image: url('/images/hero-photo/slider-2-blur.jpg')"
+  .page-header-inner
+    h2.page-title
+      span.ch 我要報名
+      span.en Register
+
+.register
+  .activities-name
+    .block-title 活動名稱
+    h2.name 與音樂作伴，認識古典音樂講座
+
+  .activities-price
+    .block-title 活動費用
+    .form
+      .form-row
+        .form-label 費用項目一
+        .form-content.number $#{rand(10000)}
+
+      .form-row
+        .form-label 費用項目二
+        .form-content.number $#{rand(10000)}
+
+      .form-row
+        .form-label 費用項目三
+        .form-content.number $#{rand(10000)}
+
+      hr
+
+      .form-row
+        .form-label 總計
+        .form-content.number.total $#{rand(100000)}
+
+  .register-from
+    .block-title 報名資訊
+    ul.step-flow
+      li.step.complete
+        .number 1
+        .title 填寫資訊
+      li.step.now
+        .number 2
+        .title 確認資訊
+
+    .form
+      .form-row
+        .form-label.required 中文姓名
+        .form-content = zh_lorem_name
+
+      .form-row
+        .form-label 性別
+        .form-content 男
+
+      .form-row
+        .form-label.required 聯絡電話
+        .form-content 0912345678
+
+      .form-row
+        .form-label.required 電子信箱
+        .form-content = lorem_email
+
+      .form-row
+        .form-label 通訊地址
+        .form-content 新北市汐止區大同路1段369號
+
+      .form-row
+        .form-label 報名梯（場）次
+        .form-content 第二梯次
+
+      .form-row
+        .form-label 就讀學校科系及年級
+        .form-content 台灣大學材料工程系三年級
+
+      .form-row
+        .form-label 家長住所電話
+        .form-content (02)34567890
+
+      .form-row
+        .form-label 家長行動電話
+        .form-content 0912345678
+
+      .form-row
+        .form-label.required 參加人數
+        .form-content 3
+
+      .form-row
+        .form-label 車號
+        .form-content TN-4768
+
+      .form-row
+        .form-label 注意事項
+        .form-content 您所提供的資料將提供為聯合行旅使用，請務必確認資訊正確無誤，以利報名進行。
+
+      .form-row
+        .form-label
+        .form-content.buttonbox
+          input.btn type="submit" value="送出資訊"
+          input.btn type="submit" value="修改"

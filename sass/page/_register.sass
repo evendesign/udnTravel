@@ -1,0 +1,97 @@
+.register
+  @extend %container
+  max-width: 640px
+  +rhythm(2,0,0,2)
+
+  .activities-name
+    +trailer(2)
+
+    .name
+      text-align: center
+      +adjust-font-size-to(32px)
+
+  .activities-price
+    +trailer(2)
+
+  .register-from
+    +trailer(2)
+
+  .step-flow
+    +reset-box-model
+    +trailer(1)
+    font-size: 0
+    text-align: center
+    list-style: none
+
+    .step
+      position: relative
+      display: inline-block
+      vertical-align: top
+      padding: 12px 2%
+
+      .number
+        position: relative
+        z-index: 10
+        width: 48px
+        height: 48px
+        margin: 0 auto 12px
+        font-size: 36px
+        line-height: 48px
+        color: $color-black-a50
+        background-color: white
+        border: 5px solid $color-black-a50
+        +border-radius(100%)
+
+      .title
+        width: 60px
+        +adjust-font-size-to(13px)
+
+      &.now
+        .number
+          color: #c00
+          border-color: #c00
+
+      &.complete
+        .number
+          +hide-text()
+          z-index: 10
+          background: white url("/images/step-complete.svg") no-repeat center
+          border-color: #c00
+
+    .step + .step
+      &:before
+        content: ""
+        position: absolute
+        top: 38px
+        left: -50%
+        right: 50%
+        height: 5px
+        background-color: $color-black-a50
+
+    .step.now
+      &:before
+        background-color: #c00
+
+  .step-confirm
+    +trailer(2)
+    .confirm-title
+      +pie-clearfix
+      +trailer()
+      padding-bottom: 3px
+      border-bottom: 1px solid $color-black-a35
+
+      .title
+        +inline-block()
+        font-weight: bold
+
+      .btn
+        float: right
+        padding: 2px 12px
+        +adjust-font-size-to(13px)
+
+
+  @include at-breakpoint($pad)
+    .step-flow
+      .step
+        .title
+          +adjust-font-size-to(15px)

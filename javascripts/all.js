@@ -27,7 +27,7 @@ $(function(){
     });
   }
 
-  if ( $('.travel-photo-img').length != 0 ) {
+  if ( $('.enter').length != 0 ) {
     $('.travel-photo-img').each(function(){
       var targetImage = new Image;
       var targetTag = $(this);

@@ -6,7 +6,7 @@
       &:hover
         .travel-info-wrap
           .info-mask
-            background-color: rgba(255,255,255,.1)
+            background-color: $color-white-a10
 
       .sns-share
         +leader()
@@ -32,12 +32,12 @@
       &.record
         .travel-info-wrap
           .info-mask
-            background-color: rgba(255,255,255,.5)
+            background-color: $color-white-a50
 
         &:hover
           .travel-info-wrap
             .info-mask
-              background-color: rgba(255,255,255,.5)
+              background-color: $color-white-a50
 
         .travel-info-wrap
           .travel-info
@@ -45,11 +45,11 @@
 
             .type
               &:before, &:after
-                background-color: rgba(0,0,0,.25)
+                background-color: $color-black-a25
 
             .btn.enter
               color: $color-black-a50
-              background-color: rgba(255,255,255,.75) !important
+              background-color: $color-white-a75 !important
 
   .travel-summary
     .summary-menu
@@ -60,27 +60,6 @@
     .tab-content
       color: white
       background-color: #565151
-
-  .block-title
-    +trailer(2)
-    overflow: hidden
-    position: relative
-    text-align: center
-    font-weight: bold
-
-    &:before, &:after
-      content: ""
-      position: absolute
-      top: 50%
-      width: 50%
-      height: 1px
-      background-color: $color-black-a35
-
-    &:before
-      left: -56px
-
-    &:after
-      right: -56px
 
   .travel-record-photo, .travel-highlight, .travel-related-item, .travel-related-link
     @extend %container

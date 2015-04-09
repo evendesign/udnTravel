@@ -1,0 +1,22 @@
+.block-title
+  +trailer(1.5)
+  overflow: hidden
+  position: relative
+  text-align: center
+  +adjust-font-size-to(24px)
+  font-weight: bold
+  color: $color-black-light
+
+  &:before, &:after
+    content: ""
+    position: absolute
+    top: 50%
+    width: 50%
+    height: 1px
+    background-color: $color-black-a10
+
+  &:before
+    left: -56px
+
+  &:after
+    right: -56px

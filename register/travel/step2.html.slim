@@ -1,0 +1,156 @@
+.page-header style="background-image: url('/images/hero-photo/slider-2-blur.jpg')"
+  .page-header-inner
+    h2.page-title
+      span.ch 我要報名
+      span.en Register
+
+.register
+  .activities-name
+    .block-title 活動名稱
+    h2.name 與音樂作伴，認識古典音樂講座
+
+  .activities-price
+    .block-title 活動費用
+    .form
+      .form-row
+        .form-label 費用項目一
+        .form-content.number $#{rand(10000)}
+
+      .form-row
+        .form-label 費用項目二
+        .form-content.number $#{rand(10000)}
+
+      .form-row
+        .form-label 費用項目三
+        .form-content.number $#{rand(10000)}
+
+      hr
+
+      .form-row
+        .form-label 總計
+        .form-content.number.total $#{rand(100000)}
+
+  .register-from
+    .block-title 報名資訊
+    ul.step-flow
+      li.step.complete
+        .number 1
+        .title 填寫聯絡資訊
+      li.step.now
+        .number 2
+        .title 填寫個人資訊
+      li.step
+        .number 3
+        .title 填寫其他資訊
+      li.step
+        .number 4
+        .title 確認資訊
+
+    .form
+      .form-row
+        .form-label 護照姓名
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 護照號碼
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 護照到期日
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 他國護照
+        .form-content
+          input type="text" placeholder="若沒有，請填無"
+
+      .form-row
+        .form-label 出生日期
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 年齡
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 身分證字號
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 血型
+        .form-content
+          .radio
+            input type="radio" name="bloodtype" O
+          .radio
+            input type="radio" name="bloodtype" A
+          .radio
+            input type="radio" name="bloodtype" B
+          .radio
+            input type="radio" name="bloodtype" AB
+
+      .form-row
+        .form-label 職業
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label Line ID
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label Facebook Account
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label WeChat ID
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 飲食習慣
+        .form-content
+          .form-row
+            input.checkbox type="checkbox" 一般
+          .form-row
+            input.checkbox type="checkbox" 素食
+          .form-row
+            input.checkbox type="checkbox" 不吃豬
+          .form-row
+            input.checkbox type="checkbox" 不吃牛
+          .form-row
+            input.checkbox type="checkbox" 不吃羊
+          .form-row
+            input.checkbox.othercheckbox type="checkbox" 其他說明
+            input.otherinput type="text" disabled=""
+
+      .form-row
+        .form-label 健康狀況
+        .form-content
+          .form-row
+            input.checkbox type="checkbox" 無
+          .form-row
+            input.checkbox type="checkbox" 氣喘
+          .form-row
+            input.checkbox type="checkbox" 癲癇
+          .form-row
+            input.checkbox type="checkbox" 藥物過敏反應
+          .form-row
+            input.checkbox type="checkbox" 蠶豆症
+          .form-row
+            input.checkbox type="checkbox" 心臟疾病
+          .form-row
+            input.checkbox.othercheckbox type="checkbox" 其他說明
+            input.otherinput type="text" disabled="" placeholder="請說明其他任何特出情況"
+
+      .form-row
+        .form-label
+        .form-content.buttonbox
+          input.btn type="submit" value="下一步"
