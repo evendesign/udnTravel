@@ -1,6 +1,54 @@
 .footer
-  +rhythm(0,1,1,0)
+  text-align: center
+  color: $color-black-a50
+  +adjust-font-size-to(13px)
 
-  .info
-    +adjust-font-size-to(13px)
-    text-align: center
+  .footer-menu
+    +reset-box-model
+    +rhythm(0,1,1,0)
+    list-style: none
+
+    li
+      padding: 6px 0
+      +adjust-font-size-to(15px, .75)
+
+    a
+      +unstyled-link
+      padding: 0 12px
+
+      &:hover
+        color: $color-black
+
+  .contact-info
+    +reset-box-model
+    list-style: none
+
+    li
+      +inline-block()
+      padding: 0 6px
+
+  .udnlogo
+    +inline-block()
+    +trailer(.5)
+
+  .company
+    +rhythm(1,.25,.25,0)
+    font-weight: bold
+    color: white
+    background-color: $color-black-a75
+
+  +at-breakpoint($pad)
+    .footer-menu
+      +rhythm(0,2,1,0)
+
+      li
+        +inline-block()
+        padding: 0
+
+      li + li
+        border-left: 1px solid $color-gray
+
+    .company
+      +rhythm(2,.25,.25,0)
+
+
