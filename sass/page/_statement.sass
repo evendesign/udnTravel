@@ -1,0 +1,13 @@
+.statement
+  @extend %container
+  max-width: 640px
+  +rhythm(2,0,0,2)
+
+  ul, ol
+    +trailer(1)
+
+  ol
+    ul
+      li
+        +trailer(.5)
+        +adjust-font-size-to(15px)
