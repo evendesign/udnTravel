@@ -11,7 +11,7 @@
 
   .activities-price
     .block-title 活動費用
-    .form
+    form.form
       .form-row
         .form-label 費用項目一
         .form-content.number $#{rand(10000)}
@@ -40,7 +40,7 @@
         .number 2
         .title 確認資訊
 
-    .form
+    form.form
       .form-row
         .form-label.required 中文姓名
         .form-content
@@ -106,4 +106,5 @@
       .form-row
         .form-label
         .form-content.buttonbox
-          input.btn type="submit" value="下一步"
+          a href="/register/orientation/step2.html"
+            input.btn type="button" value="下一步"

@@ -68,7 +68,7 @@
         height: 5px
         background-color: $color-black-a50
 
-    .step.now
+    .complete + .complete, .step.now
       &:before
         background-color: #c00
 
@@ -89,6 +89,17 @@
         padding: 2px 12px
         +adjust-font-size-to(13px)
 
+  .register-complete
+    +leader(2)
+    text-align: center
+
+    .title
+      +trailer()
+      +adjust-font-size-to(36px)
+      color: #C00
+
+    .info
+      padding: 24px
 
   @include at-breakpoint($pad)
     .step-flow
