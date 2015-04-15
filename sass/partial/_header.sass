@@ -1,3 +1,41 @@
+.function-bar
+  +pie-clearfix
+  padding: 16px 12px 0
+  +adjust-font-size-to(13px, .5)
+
+  .language
+    float: left
+
+  .member
+    float: right
+
+  .member-name
+    +inline-block()
+    padding: 0 6px
+    color: $color-black-a50
+
+  a
+    +unstyled-link
+    +inline-block()
+    padding: 0 6px
+    color: $color-black-a50
+
+    &:hover
+      color: $color-black-a75
+      text-decoration: underline
+
+  ul
+    +pie-clearfix
+    +reset-box-model
+    list-style: none
+
+    li
+      float: left
+
+    li + li
+      border-left: 1px solid $color-black-a50
+
+
 .header
   @extend %container
   text-align: center

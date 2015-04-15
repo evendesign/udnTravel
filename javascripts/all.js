@@ -1,6 +1,7 @@
 $(function(){
   if ( $('.hero').length != 0 ) {
-     $('.hero-slider-for').slick({
+    $('.hero-holder').addClass('active');
+    $('.hero-slider-for').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
@@ -24,18 +25,6 @@ $(function(){
           }
         }
       ]
-    });
-  }
-
-  if ( $('.enter').length != 0 ) {
-    $('.travel-photo-img').each(function(){
-      var targetImage = new Image;
-      var targetTag = $(this);
-      var imgSource = targetTag.attr('src');
-      targetImage.src = imgSource;
-      var colorThief = new ColorThief();
-      var color = colorThief.getColor(targetImage);
-      targetTag.parents('.travel-item').find('.enter').css('background-color', "rgb(" + color + ")");
     });
   }
 

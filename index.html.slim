@@ -1,14 +1,15 @@
 .hero
-  .hero-slider-for
-    - 9.times do |i|
-      a.hero-photo href="/activities/travel-intro.html"
-        img.hero-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
-
-  .hero-slider-nav-wrap
-    .hero-slider-nav
+  .hero-holder
+    .hero-slider-for
       - 9.times do |i|
-        .hero-photo
-          img src="/images/hero-photo/slider-#{i+1}.jpg"
+        a.hero-photo href="/activities/travel-intro.html"
+          img.hero-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
+
+    .hero-slider-nav-wrap
+      .hero-slider-nav
+        - 9.times do |i|
+          .hero-photo
+            img src="/images/hero-photo/slider-#{i+1}.jpg"
 
 .itinerary-type
   a.type-item href="#"
@@ -46,7 +47,7 @@
 .travel-activities
   - 6.times do |i|
     a.travel-item href="/activities/travel-intro.html"
-      .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
+      .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg" id="travel-photo-img-#{i+1}" onload='loaded(this.id)'
       .travel-info-wrap
         .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
         .info-mask
@@ -73,6 +74,7 @@
             .type: img src="http://placehold.it/32x32"
             h3.title 澄金秋彩紐西蘭南島攝影漫遊
             .date 2015/05/23
+
       - 4.times do |i|
         a.record-item href="/record/travel-record.html"
           .record-photo: img src="/images/hero-photo/slider-#{i+2}.jpg"
