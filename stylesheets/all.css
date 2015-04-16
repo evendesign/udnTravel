@@ -227,7 +227,7 @@ body { background-color: #f5f4f3; }
 .form { margin: 0 auto; }
 
 .form-row:after { content: ""; display: table; clear: both; }
-.form-row.error .form-content { background-color: #ffeeee; }
+.form-row.error .form-content { background-color: #ffeeee; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
 
 .error-msg { font-size: 13px; line-height: 24px; font-weight: bold; color: red; }
 .error-msg:before { content: "*"; }
