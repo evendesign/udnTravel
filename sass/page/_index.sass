@@ -22,12 +22,13 @@
     +pie-clearfix
     +unstyled-link
     display: block
+    position: relative
     margin: 6px
 
     &:hover
       .record-info-wrap
-        .info-mask
-          background-color: rgba(255,255,255,.2)
+        .info-background
+          background-color: rgba(0,0,0,.7)
 
     .record-photo
       img
@@ -35,8 +36,11 @@
 
 
     .record-info-wrap
-      position: relative
       overflow: hidden
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
 
       .info-background
         position: absolute
@@ -44,7 +48,8 @@
         left: 0
         right: 0
         bottom: 0
-        background-position: center center
+        background-color: rgba(0,0,0,.4)
+        +transition(background .25s)
 
       .info-mask
         position: absolute
@@ -62,10 +67,13 @@
         z-index: 10
         padding: 18px 12px
         color: white
+        font-weight: bold
+        +text-shadow(0 1px 3px rgba(0,0,0,.25))
 
         .title
           +adjust-font-size-to(16px)
           +ellipsis
+          font-weight: bold
 
         .date
           overflow: hidden
@@ -141,21 +149,6 @@
 
       &.big
         width: 50%
-
-        .record-info-wrap
-
-          .record-info
-            padding: 42px 12px
-
-            .title
-              +adjust-font-size-to(24px, 1.5)
-
-            .date
-              +adjust-font-size-to(15px)
-
-            .type
-              img
-                margin: rhythm(.5)
 
   .fb-page
     +adjust-font-size-to(36px)

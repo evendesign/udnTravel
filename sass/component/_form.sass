@@ -91,13 +91,25 @@ $form-tip-color: #999
 .form-row
   +pie-clearfix
 
+  &.error
+    .form-content
+      background-color: #fee
+
+.error-msg
+  +adjust-font-size-to(13px)
+  font-weight: bold
+  color: red
+
+  &:before
+    content: "*"
+
 .form-row + .form-row
-  +leader(.75)
+  +leader(.25)
 
 .form-label
   display: block
+  padding: 6px
   +adjust-font-size-to($form-label-font-size, 1.25)
-  +trailer(0.125)
   color: black
   @extend %subpixel
 
@@ -113,6 +125,7 @@ $form-tip-color: #999
 
 .form-content
   display: block
+  padding: 6px
   +adjust-font-size-to($form-content-font-size, 1.25)
   color: $form-content-color
 
@@ -179,4 +192,3 @@ $form-tip-color: #999
     +box-sizing(border-box)
     float: right
     width: 70%
-    padding-left: 12px
