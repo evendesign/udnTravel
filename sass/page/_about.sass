@@ -1,7 +1,12 @@
 .about
   .summary-menu
+    li
+      width: 33.333%
     li.active
       &:after
         border-bottom: 12px solid white
 
-  .about-content
+  +at-breakpoint($pad)
+    .summary-menu
+      li
+        width: 15%

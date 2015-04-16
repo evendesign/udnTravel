@@ -25,7 +25,7 @@
         height: 48px
 
     .name
-      +adjust-font-size-to(15px)
+      +adjust-font-size-to(13px)
 
   +at-breakpoint($pad)
 
@@ -38,11 +38,13 @@
           height: 64px
 
       .name
+        +adjust-font-size-to(15px)
         +leader(.5)
 
 $travel-filter-bg: #F6F7F8
 .travel-filter
   position: relative
+  +rhythm(0,.25,.25,0)
   background-color: $travel-filter-bg
 
   .extra-btn
@@ -93,6 +95,28 @@ $travel-filter-bg: #F6F7F8
   padding: 0 rhythm(.5)
   text-align: right
 
-  .extra-btn
-    padding: 6px 32px
+  .extra-option-btn
+    position: relative
+    +unstyled-link
+    padding: 6px 48px 6px 24px
     background-color: $travel-filter-bg
+    +transition(background-color .25s)
+
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      right: 24px
+      margin-top: -3px
+      border: 6px solid transparent
+      border-top-color: $color-black
+      +transition(.25s)
+
+
+    &:hover
+      background-color: darken($travel-filter-bg, 5%)
+
+    &.active
+      &:after
+        margin-top: -9px
+        +rotate(180deg)

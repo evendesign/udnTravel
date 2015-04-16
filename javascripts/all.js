@@ -28,6 +28,10 @@ $(function(){
     });
   }
 
+  $('.extra-option-btn').on('click', function(){
+    $(this).toggleClass('active');
+  });
+
   $('.badge').on('click', function(){
     $(this).toggleClass('active');
   });
