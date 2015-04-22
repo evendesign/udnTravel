@@ -2,8 +2,17 @@
   max-width: 1088px
   margin: rhythm(.25) auto
 
+  &.record
+    margin: rhythm(1.25) auto rhythm(.25)
+
   .travel-list-inner
     +pie-clearfix
+
+    .travel-list-item
+      .type
+        img
+          width: 32px
+          height: 32px
 
 
   +at-breakpoint($pad)

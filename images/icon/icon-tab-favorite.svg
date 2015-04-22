@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-favorite</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon-follow" sketch:type="MSLayerGroup" transform="translate(9.000000, 10.000000)" stroke-width="1.5" stroke="#000000">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <path d="M26.2775072,15.8295878 L15.0001767,28 L3.72114648,15.8261983 C1.321716,13.2741154 0,10.2778546 0,7.38885331 C0,2.90045038 2.69067412,0 6.85449372,0 C10.5316562,0 11.8664753,1.66982836 14.0777875,4.43643035 L14.4885882,4.9493024 C14.6162906,5.10823333 14.8029923,5.19959975 14.9991143,5.19959975 C15.1953071,5.19959975 15.3825756,5.10823333 15.5099946,4.9493024 L15.9239118,4.43243831 C18.133949,1.66847265 19.4682723,0 23.1439475,0 C27.3087587,0 29.9999994,2.90045038 29.9999994,7.38885331 C30.0009909,10.2778546 28.6792749,13.2741154 26.2775072,15.8295878 L26.2775072,15.8295878 L26.2775072,15.8295878 Z" id="list-title-icon-follow"></path>
+            </g>
+        </g>
+    </g>
+</svg>

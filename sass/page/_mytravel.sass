@@ -1,75 +1,55 @@
-.mytravel-list
-  position: relative
-  max-width: 1088px
-  margin: 0 auto
-  +pie-clearfix
-  text-align: center
+.mytravel
+  .summary-menu
+    li
+      width: 50%
+    li.active
+      &:after
+        border-bottom: 12px solid white
 
-  .list-header
-    position: relative
-    z-index: 10
-    +rhythm(0,2,2,0)
-    +adjust-font-size-to(24px, 1)
+  .tab-content
+    padding: 6px 0
 
-    .favorite, .follow
-      +inline-block()
-      position: relative
-      padding-left: 30px
-
-      &:before
-        content: ""
-        position: absolute
-        top: 0
-        left: 0
-
-    .favorite:before
-      width: 24px
-      height: 24px
-      background: url("/images/list-title-icon-favorite.svg") no-repeat
-
-    .follow:before
-      width: 24px
-      height: 24px
-      background: url("/images/list-title-icon-follow.svg") no-repeat
-
-  .follow-list
-    +background(linear-gradient(#C5D2D3 0px, #FFFFFF 250px))
-
-  .favorite-list
-    +background(linear-gradient(#D3CCC6 0px, #FFFFFF 250px))
+    .tab-pane
+      max-width: 1088px
+      margin: 0 auto
+      padding: 0
 
   .update-log
+    +pie-clearfix
     margin: -6px 6px 6px
-    padding: 12px 18px
-    text-align: left
-    +adjust-font-size-to(15px, 1.5)
+    text-align: center
+    +adjust-font-size-to(13px, 1.5)
+    font-weight: bold
     color: white
     background-color: #565151
 
-    ul
-      list-style: none
-      padding: 0
-      margin: 0
+    .title
+      background-color: $color-black-a10
 
-      li
-        +ellipsis
-        border-top: 1px solid $color-white-a10
+    .date
+      display: inline-block
+      color: $color-white-a35
 
-        .date
-          display: inline-block
-          padding-right: 6px
-          font-weight: 500
-          color: $color-white-a35
+    .info
+      display: inline-block
+      +adjust-font-size-to(15px, 1.5)
+
+
+  .travel-list-item
+    .type
+      img
+        width: 32px
+        height: 32px
 
   .empty-item
     position: relative
     margin: 0 6px 48px
-    padding: 48px
+    padding: 72px 48px
     text-align: center
     +adjust-font-size-to(21px)
     color: $color-black-a50
     background-color: white
-    border: 1px solid $color-black-a35
+    border: 1px solid $color-black-a10
 
     .empty-follow-icon, .empty-favorite-icon
       width: 64px
@@ -83,44 +63,40 @@
       background: url("/images/empty-icon-favorite.svg") no-repeat
 
   +at-breakpoint($pad)
-    .follow-list, .favorite-list
+    .summary-menu
+      li
+        max-width: 544px
+        width: 50%
+
+    .update-log
+      text-align: left
+
+      .title
+        float: left
+        padding: 3px 15px
+
+      .date
+        float: left
+        padding: 3px 6px 3px 12px
+
+      .info
+        display: block
+        margin-right: 12px
+        padding: 3px 0
+        +ellipsis
+
+    .travel-list-item
       +box-sizing(border-box)
       float: left
       width: 50%
-
-    .follow-list
-      padding: 0 6px 0 12px
-
-    .favorite-list
-      padding: 0 12px 0 6px
-
-    .follow-list, .favorite-list
-      &:before
-        content: ""
-        position: absolute
-        top: 0
-        width: 60%
-        height: 250px
-
-    .follow-list
-      padding: 0 6px 0 12px
-
-      &:before
-        left: -10%
-        +background(linear-gradient(#C5D2D3 0px, #FFFFFF 250px))
-
-    .favorite-list
-      padding: 0 12px 0 6px
-
-      &:before
-        right: -10%
-        +background(linear-gradient(#D3CCC6 0px, #FFFFFF 250px))
-
-    .travel-list-item
-      margin: 12px 0
+      padding: 6px
 
     .update-log
       margin: 0
 
     .empty-item
       margin: 0 0 24px
+
+  +at-breakpoint($desktop)
+    .tab-content
+      +rhythm(0,2,2,0)

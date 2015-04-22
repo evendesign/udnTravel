@@ -1,47 +1,57 @@
+- travel_types_wt = [\
+  ['/images/icon/icon-item-special-wt.svg'],\
+  ['/images/icon/icon-item-camp-wt.svg'],\
+  ['/images/icon/icon-item-design-wt.svg'],\
+  ['/images/icon/icon-item-build-wt.svg'],\
+  ['/images/icon/icon-item-food-wt.svg'],\
+  ['/images/icon/icon-item-music-wt.svg'],\
+  ['/images/icon/icon-item-photography-wt.svg'],\
+]
+
 .page-header style="background-image: url('/images/hero-photo/slider-3-blur.jpg')"
   .page-header-inner
     h2.page-title
       span.ch 我的旅遊
       span.en My Travel
 
-.mytravel-list
-  .follow-list
-    .list-header
-      span.follow 我的追蹤
+.mytravel
+  ul.summary-menu
+    li.active: a data-toggle="tab" href="#follow"
+      img.icon src="/images/icon/icon-tab-follow.svg"
+      .span 我的追蹤
+    li: a data-toggle="tab" href="#favorite"
+      img.icon src="/images/icon/icon-tab-favorite.svg"
+      .span 我的收藏
 
-    - 3.times do |i|
-      .travel-list-item
-        a.travel-item href="/activities/travel-intro.html"
-          .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
-          .travel-info-wrap
-            .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
-            .info-mask
-            .travel-info
-              h2.title 澄金秋彩紐西蘭南島攝影漫遊
-              .type: img src="http://placehold.it/32x32"
-              .date 2015/05/23
-        .update-log
-          .title 最新消息
-          ul
-            li
-              span.date 2015/05/18
-              | 新增第三天詳細行程
-            li
-              span.date 2015/05/06
-              | 新增航班資訊與費用
+  .tab-content
+    #follow.travel-list.tab-pane.fade.in.active
+      .travel-list-inner
+        - 4.times do |i|
+          .travel-list-item
+            a.travel-item href="/activities/travel-intro.html"
+              .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
+              .travel-info-wrap
+                .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
+                .info-mask
+                .travel-info
+                  h2.title 澄金秋彩紐西蘭南島攝影漫遊
+                  .type: img src="#{travel_types_wt[rand(7)]}"
+                  .date 2015/05/23
+            .update-log
+              .title 最新消息
+              span.date = lorem_date.to_date
+              .info 新增第三天詳細行程
 
-  .favorite-list
-    .list-header
-      span.favorite 我的收藏
-
-    - 5.times do |i|
-      .travel-list-item
-        a.travel-item href="/record/travel-record.html"
-          .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
-          .travel-info-wrap
-            .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
-            .info-mask
-            .travel-info
-              h2.title 澄金秋彩紐西蘭南島攝影漫遊
-              .type: img src="http://placehold.it/32x32"
-              .date 2015/05/23
+    #favorite.travel-list.tab-pane.fade
+      .travel-list-inner
+        - 6.times do |i|
+          .travel-list-item
+            a.travel-item href="/record/travel-record.html"
+              .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
+              .travel-info-wrap
+                .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
+                .info-mask
+                .travel-info
+                  h2.title 澄金秋彩紐西蘭南島攝影漫遊
+                  .type: img src="#{travel_types_wt[rand(7)]}"
+                  .date 2015/05/23

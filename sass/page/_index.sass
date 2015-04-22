@@ -48,7 +48,8 @@
         left: 0
         right: 0
         bottom: 0
-        background-color: rgba(0,0,0,.4)
+        background-color: rgba(0,0,0,.3)
+        +background(linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.7)))
         +transition(background .25s)
 
       .info-mask
@@ -84,7 +85,10 @@
 
           img
             display: block
-            margin: rhythm(.3) rhythm(.5)
+            width: 48px
+            height: 48px
+            margin: 0
+            margin-right: 6px
 
         .description
           +adjust-font-size-to(13px, .75)
@@ -129,26 +133,18 @@
       right: 48px
 
   .record-wrap
-    &:nth-child(odd)
-      .record-item
-        &.big
-          float: right
 
     .record-item
       float: left
-      width: 25%
+      width: 50%
       margin: 0
 
       .record-info-wrap
         .record-info
           padding: 12px
 
-          .type
-            img
-              margin: rhythm(.25) rhythm(.5)
-
       &.big
-        width: 50%
+        width: 100%
 
   .fb-page
     +adjust-font-size-to(36px)
@@ -166,3 +162,21 @@
         .travel-info-wrap
           left: 0
           right: auto
+
+  .record-wrap
+    &:nth-child(odd)
+      .record-item
+        &.big
+          float: right
+
+    .record-item
+      float: left
+      width: 25%
+      margin: 0
+
+      .record-info-wrap
+        .record-info
+          padding: 12px
+
+      &.big
+        width: 50%

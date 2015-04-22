@@ -1,7 +1,7 @@
 .hero
   position: relative
   overflow: hidden
-  padding-top: 62.5%
+  padding-top: 84.375%
 
   .hero-holder
     position: absolute
@@ -18,15 +18,11 @@
   .hero-slider-for
 
   .hero-slider-nav-wrap
-    position: absolute
-    left: 0
-    right: 0
-    bottom: 0
 
   .hero-slider-nav
     overflow: hidden
     position: relative
-    background-color: rgba(255,255,255,.5)
+    background-color: rgba(0,0,0,.05)
 
     .slick-list
       width: 80%
@@ -70,3 +66,15 @@
       &:hover
         margin: 10px 4px
         border: 2px solid white
+
+  +at-breakpoint($pad)
+    padding-top: 62.5%
+
+    .hero-slider-nav-wrap
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+
+    .hero-slider-nav
+      background-color: rgba(255,255,255,.5)

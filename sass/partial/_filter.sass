@@ -10,7 +10,7 @@
   .type-item
     +inline-block()
     +unstyled-link
-    padding: rhythm(1)
+    padding: rhythm(.75)
     text-align: center
 
     &:hover
@@ -20,9 +20,9 @@
       background-color: $color-black-a10
 
     .icon
-      img
-        width: 48px
-        height: 48px
+      width: 48px
+      height: 48px
+      opacity: .7
 
     .name
       +adjust-font-size-to(13px)
@@ -33,9 +33,9 @@
       padding: rhythm(1) rhythm(1.5)
 
       .icon
-        img
-          width: 64px
-          height: 64px
+        width: 64px
+        height: 64px
+        opacity: .7
 
       .name
         +adjust-font-size-to(15px)
@@ -81,7 +81,8 @@ $travel-filter-bg: #F6F7F8
 
       .option
         +inline-block()
-        padding: 0 12px
+        padding: 0 9px
+        cursor: pointer
 
         &:hover
           background-color: $color-black-a05
@@ -92,13 +93,13 @@ $travel-filter-bg: #F6F7F8
 .find-travel
   max-width: 1088px
   margin: 0 auto
-  padding: 0 rhythm(.5)
+  padding: 0 rhythm(.25) 3px
   text-align: right
 
   .extra-option-btn
     position: relative
     +unstyled-link
-    padding: 6px 48px 6px 24px
+    padding: 3px 48px 3px 24px
     background-color: $travel-filter-bg
     +transition(background-color .25s)
 
@@ -110,8 +111,6 @@ $travel-filter-bg: #F6F7F8
       margin-top: -3px
       border: 6px solid transparent
       border-top-color: $color-black
-      +transition(.25s)
-
 
     &:hover
       background-color: darken($travel-filter-bg, 5%)
@@ -120,3 +119,9 @@ $travel-filter-bg: #F6F7F8
       &:after
         margin-top: -9px
         +rotate(180deg)
+
+  +at-breakpoint($pad)
+    padding: 0 rhythm(.5)
+
+    .type-item
+      padding: rhythm()

@@ -1,3 +1,13 @@
+- travel_types_wt = [\
+  ['/images/icon/icon-item-special-wt.svg'],\
+  ['/images/icon/icon-item-camp-wt.svg'],\
+  ['/images/icon/icon-item-design-wt.svg'],\
+  ['/images/icon/icon-item-build-wt.svg'],\
+  ['/images/icon/icon-item-food-wt.svg'],\
+  ['/images/icon/icon-item-music-wt.svg'],\
+  ['/images/icon/icon-item-photography-wt.svg'],\
+]
+
 .page-header style="background-image: url('/images/hero-photo/slider-7-blur.jpg')"
   .page-header-inner
     h2.page-title
@@ -6,36 +16,36 @@
 
 .travel-filter
   .itinerary-type
-    a.type-item.active href="#"
-      .icon: img src="http://placehold.it/64x64"
+    a.type-item.active href="/activities/"
+      img.icon src="/images/icon/icon-item-all.svg"
       .name 所有旅程
 
-    a.type-item href="#"
-      .icon: img src="http://placehold.it/64x64"
+    a.type-item href="/activities/"
+      img.icon src="/images/icon/icon-item-special.svg"
       .name 私房小品
 
-    a.type-item href="#"
-      .icon: img src="http://placehold.it/64x64"
+    a.type-item href="/activities/"
+      img.icon src="/images/icon/icon-item-photography.svg"
       .name 攝影之旅
 
-    a.type-item href="#"
-      .icon: img src="http://placehold.it/64x64"
+    a.type-item href="/activities/"
+      img.icon src="/images/icon/icon-item-music.svg"
       .name 音樂饗宴
 
-    a.type-item href="#"
-      .icon: img src="http://placehold.it/64x64"
+    a.type-item href="/activities/"
+      img.icon src="/images/icon/icon-item-food.svg"
       .name 有機美食
 
-    a.type-item href="#"
-      .icon: img src="http://placehold.it/64x64"
+    a.type-item href="/activities/"
+      img.icon src="/images/icon/icon-item-design.svg"
       .name 文創設計
 
-    a.type-item href="#"
-      .icon: img src="http://placehold.it/64x64"
+    a.type-item href="/activities/"
+      img.icon src="/images/icon/icon-item-build.svg"
       .name 歷史建築
 
-    a.type-item href="#"
-      .icon: img src="http://placehold.it/64x64"
+    a.type-item href="/activities/"
+      img.icon src="/images/icon/icon-item-camp.svg"
       .name 主題營隊
 
   .nav.collapse#travel-extra-option
@@ -72,7 +82,7 @@
             .info-mask
             .travel-info
               h2.title 澄金秋彩紐西蘭南島攝影漫遊
-              .type: img src="http://placehold.it/32x32"
+              .type: img src="#{travel_types_wt[rand(7)]}"
               .date 2015/05/23
 
 = render "/partial/pagination"

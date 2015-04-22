@@ -12,13 +12,19 @@
         +leader()
 
         .mail
-          +replace-text-with-svg("icon/sns-mail-white")
+          width: 32px
+          height: 32px
+          background-image: url("/images/icon/icon-sns-mail-wt.svg")
 
         .facebook
-          +replace-text-with-svg("icon/sns-fb-white")
+          width: 32px
+          height: 32px
+          background-image: url("/images/icon/icon-sns-fbpage-wt.svg")
 
         .googleplus
-          +replace-text-with-svg("icon/sns-gplus-white")
+          width: 32px
+          height: 32px
+          background-image: url("/images/icon/icon-sns-gplus-wt.svg")
 
         .mail, .facebook, .googleplus
           +inline-block()
@@ -50,6 +56,17 @@
             .btn.enter
               color: $color-black-a50
               background-color: $color-white-a75 !important
+
+            .sns-share
+              .mail
+                background-image: url("/images/icon/icon-sns-mail.svg")
+
+              .facebook
+                background-image: url("/images/icon/icon-sns-fbpage.svg")
+
+              .googleplus
+                background-image: url("/images/icon/icon-sns-gplus.svg")
+
 
   .travel-summary
     .summary-menu

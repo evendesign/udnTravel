@@ -1,3 +1,22 @@
+- travel_types_wt = [\
+  ['/images/icon/icon-item-special-wt.svg'],\
+  ['/images/icon/icon-item-camp-wt.svg'],\
+  ['/images/icon/icon-item-design-wt.svg'],\
+  ['/images/icon/icon-item-build-wt.svg'],\
+  ['/images/icon/icon-item-food-wt.svg'],\
+  ['/images/icon/icon-item-music-wt.svg'],\
+  ['/images/icon/icon-item-photography-wt.svg'],\
+]
+- travel_types = [\
+  ['/images/icon/icon-item-special.svg'],\
+  ['/images/icon/icon-item-camp.svg'],\
+  ['/images/icon/icon-item-design.svg'],\
+  ['/images/icon/icon-item-build.svg'],\
+  ['/images/icon/icon-item-food.svg'],\
+  ['/images/icon/icon-item-music.svg'],\
+  ['/images/icon/icon-item-photography.svg'],\
+]
+
 .hero
   .hero-holder
     .hero-slider-for
@@ -12,36 +31,36 @@
             img src="/images/hero-photo/slider-#{i+1}.jpg"
 
 .itinerary-type
-  a.type-item href="#"
-    .icon: img src="http://placehold.it/64x64"
+  a.type-item href="/activities/"
+    img.icon src="/images/icon/icon-item-all.svg"
     .name 所有旅程
 
-  a.type-item href="#"
-    .icon: img src="http://placehold.it/64x64"
+  a.type-item href="/activities/"
+    img.icon src="/images/icon/icon-item-special.svg"
     .name 私房小品
 
-  a.type-item href="#"
-    .icon: img src="http://placehold.it/64x64"
+  a.type-item href="/activities/"
+    img.icon src="/images/icon/icon-item-photography.svg"
     .name 攝影之旅
 
-  a.type-item href="#"
-    .icon: img src="http://placehold.it/64x64"
+  a.type-item href="/activities/"
+    img.icon src="/images/icon/icon-item-music.svg"
     .name 音樂饗宴
 
-  a.type-item href="#"
-    .icon: img src="http://placehold.it/64x64"
+  a.type-item href="/activities/"
+    img.icon src="/images/icon/icon-item-food.svg"
     .name 有機美食
 
-  a.type-item href="#"
-    .icon: img src="http://placehold.it/64x64"
+  a.type-item href="/activities/"
+    img.icon src="/images/icon/icon-item-design.svg"
     .name 文創設計
 
-  a.type-item href="#"
-    .icon: img src="http://placehold.it/64x64"
+  a.type-item href="/activities/"
+    img.icon src="/images/icon/icon-item-build.svg"
     .name 歷史建築
 
-  a.type-item href="#"
-    .icon: img src="http://placehold.it/64x64"
+  a.type-item href="/activities/"
+    img.icon src="/images/icon/icon-item-camp.svg"
     .name 主題營隊
 
 .travel-activities
@@ -55,7 +74,7 @@
           .badge
           h2.title 澄金秋彩紐西蘭南島攝影漫遊
           .date 2015/05/23
-          .type: img src="http://placehold.it/32x32"
+          .type: img src="#{travel_types_wt[rand(7)]}"
           p.description 由已有50年以上成功歷史的美國白鹿青少年領導訓練營精心打造，以七天的領導力訓練課程為活動主軸，透過實地任務，團體、分組作戰等遊戲環節，在反覆演練中挖掘並激發孩子潛在的領導力
           .btn.enter 詳細內容
 
@@ -70,7 +89,7 @@
         .record-info-wrap
           .info-background
           .record-info
-            .type: img src="http://placehold.it/32x32"
+            .type: img src="#{travel_types_wt[rand(7)]}"
             h3.title 澄金秋彩紐西蘭南島攝影漫遊
             .date 2015/05/23
 
@@ -80,7 +99,7 @@
           .record-info-wrap
             .info-background
             .record-info
-              .type: img src="http://placehold.it/32x32"
+              .type: img src="#{travel_types_wt[rand(7)]}"
               h3.title 澄金秋彩紐西蘭南島攝影漫遊
               .date 2015/05/23
 

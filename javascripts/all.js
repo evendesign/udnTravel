@@ -42,6 +42,9 @@ $(function(){
     mainClass: 'mfp-fade'
   });
 
+  $('.option').on('click', function(){
+    $(this).toggleClass('active');
+  });
 
   $('.othercheckbox').on('click', function(){
     if ($(this).is(":checked")) {

@@ -4,22 +4,22 @@
       span.ch 我的旅遊
       span.en My Travel
 
-.mytravel-list
-  .follow-list
-    .list-header
-      span.follow 我的追蹤
+.mytravel
+  ul.summary-menu
+    li.active: a data-toggle="tab" href="#follow"
+      img.icon src="/images/icon/icon-tab-follow.svg"
+      .span 我的追蹤
+    li: a data-toggle="tab" href="#favorite"
+      img.icon src="/images/icon/icon-tab-favorite.svg"
+      .span 我的收藏
 
-    .travel-list-item
+  .tab-content
+    #follow.tab-pane.fade.in.active
       .empty-item
         .empty-follow-icon
         span 目前尚未追蹤任何旅程
 
-
-  .favorite-list
-    .list-header
-      span.favorite 我的收藏
-
-    .travel-list-item
+    #favorite.tab-pane.fade
       .empty-item
         .empty-favorite-icon
         span 目前尚未收藏任何旅程
