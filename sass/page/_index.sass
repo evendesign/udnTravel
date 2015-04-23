@@ -11,8 +11,8 @@
 
   .btn
     +inline-block()
-    +unstyled-link
     color: white
+    text-decoration: none
 
 .record-wrap
   +pie-clearfix
@@ -20,10 +20,10 @@
 
   .record-item
     +pie-clearfix
-    +unstyled-link
     display: block
     position: relative
     margin: 6px
+    text-decoration: none
 
     &:hover
       .record-info-wrap
@@ -99,14 +99,14 @@
 .fb-page
   $fb-color-blue: #4A6CA0
   display: block
-  padding: rhythm(2)
-  +adjust-font-size-to(32px)
+  padding: rhythm(1.5)
+  +adjust-font-size-to(32px, 1.75)
   text-align: center
   background-color: $fb-color-blue
   +transition(background-color .25s)
 
   &:hover
-    +unstyled-link
+    text-decoration: none
     background-color: lighten($fb-color-blue, 3%)
 
   span
@@ -151,6 +151,21 @@
 
     span
       +inline-block()
+
+    span.fb-page-name
+      position: relative
+      padding: 0 88px 0 12px
+
+      &:after
+        content: ""
+        position: absolute
+        top: -7px
+        right: 12px
+        width: 64px
+        height: 64px
+        opacity: .5
+        background-image: url("/images/footer-fb-page.svg")
+
 
 +at-breakpoint($desktop)
   .travel-activities

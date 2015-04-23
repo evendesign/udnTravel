@@ -15,10 +15,10 @@
     color: $color-black-a50
 
   a
-    +unstyled-link
     +inline-block()
     padding: 0 6px
     color: $color-black-a50
+    text-decoration: none
 
     &:hover
       color: $color-black-a75
@@ -43,9 +43,10 @@
   .logo
     a
       +inline-block()
-      +unstyled-link
       +rhythm(1,0,0,1)
       +adjust-font-size-to(32px)
+      text-decoration: none
+      color: $color-black
 
       .ch
         font-weight: bold
@@ -55,12 +56,12 @@
         +adjust-font-size-to(16px, .75)
 
   .menu-btn
-    +unstyled-link
-    +link-colors($color-black, $color-black-light)
     display: block
     position: relative
     z-index: 10
     +padding-trailer(.25)
+    +link-colors($color-black, $color-black-light)
+    text-decoration: none
 
   .nav
     +pie-clearfix
@@ -70,11 +71,11 @@
 
     li
       a
-        +unstyled-link
         +link-colors($color-black, $color-black-light)
         display: block
         +padding-leader(.5)
         +padding-trailer(.5)
+        text-decoration: none
         border-top: 1px solid $color-gray-light
 
 
@@ -97,4 +98,3 @@
 
         a
           border: none
-

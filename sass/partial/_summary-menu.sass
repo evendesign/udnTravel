@@ -1,5 +1,4 @@
 $menu-background: #F6F7F8
-$menu-active-background: #E0E0E3
 .summary-menu
   margin: 0
   padding: 0
@@ -13,8 +12,11 @@ $menu-active-background: #E0E0E3
     position: relative
     width: 25%
 
+    &:hover
+      background-color: $color-black-a05
+
     &.active
-      background-color: $menu-active-background
+      background-color: $color-black-a10
       &:after
         content: ""
         position: absolute
@@ -30,9 +32,10 @@ $menu-active-background: #E0E0E3
 
     a
       display: block
-      +unstyled-link
       padding: 24px 0
       +adjust-font-size-to(13px)
+      text-decoration: none
+      color: $color-black
 
 .tab-content
   +rhythm(0,2,2,0)

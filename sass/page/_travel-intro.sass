@@ -8,6 +8,13 @@
           .info-mask
             background-color: $color-white-a10
 
+      .btn.enter
+        opacity: .85
+        +transition(opacity .25s)
+
+        &:hover
+          opacity: 1
+
       .sns-share
         +leader()
 
@@ -55,6 +62,7 @@
 
             .btn.enter
               color: $color-black-a50
+              cursor: default
               background-color: $color-white-a75 !important
 
             .sns-share
@@ -102,7 +110,7 @@
 
     .link-item
       display: block
-      +trailer(.5)
+      +trailer()
       text-decoration: none
 
       .link-title
@@ -180,6 +188,9 @@
 
       .travel-item
         margin: 0
+
+      .link-item
+        +trailer(.5)
 
 
   +at-breakpoint($desktop)

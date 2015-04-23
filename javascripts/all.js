@@ -48,9 +48,9 @@ $(function(){
 
   $('.othercheckbox').on('click', function(){
     if ($(this).is(":checked")) {
-      $(this).next('.otherinput').removeAttr('disabled');
+      $(this).parents('.form-content').find('.otherinput').removeAttr('disabled');
     } else {
-      $(this).next('.otherinput').attr('disabled', true);
+      $(this).parents('.form-content').find('.otherinput').attr('disabled', true);
     }
   })
 });

@@ -1,5 +1,4 @@
 .itinerary-type
-  max-width: 1088px
   margin: 0 auto
   padding: rhythm(.5)
   +nowrap
@@ -9,9 +8,10 @@
 
   .type-item
     +inline-block()
-    +unstyled-link
     padding: rhythm(.75)
     text-align: center
+    text-decoration: none
+    color: $color-black
 
     &:hover
       background-color: $color-black-a05
@@ -98,8 +98,9 @@ $travel-filter-bg: #F6F7F8
 
   .extra-option-btn
     position: relative
-    +unstyled-link
     padding: 3px 48px 3px 24px
+    text-decoration: none
+    color: $color-black
     background-color: $travel-filter-bg
     +transition(background-color .25s)
 
