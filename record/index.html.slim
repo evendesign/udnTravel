@@ -13,7 +13,7 @@
     h2.page-title
       span.ch 活動集錦
       span.en Record
-
+/! 旅程分類 start
 .travel-filter
   .itinerary-type
     a.type-item.active href="/record/"
@@ -47,10 +47,12 @@
     a.type-item href="/record/"
       img.icon src="/images/icon/icon-item-camp.svg"
       .name 主題營隊
-
+/! 旅程分類 end
+/! 旅程集錦列表 start
 .travel-list.record
   .travel-list-inner
     - 10.times do |i|
+      /! 單一旅程區塊 start
       .travel-list-item
         a.travel-item href="/record/travel-record.html"
           .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
@@ -61,5 +63,8 @@
               h2.title 澄金秋彩紐西蘭南島攝影漫遊
               .type: img src="#{travel_types_wt[rand(7)]}"
               .date 2015/05/23
-
-= render "/partial/pagination"
+      /! 單一旅程區塊 end
+  /! 內容分頁 start
+  = render "/partial/pagination"
+  /! 內容分頁 end
+/! 旅程集錦列表 end

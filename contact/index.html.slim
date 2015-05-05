@@ -7,7 +7,6 @@
 .contact-form
   .contact-message 如果您有任何的問題，歡迎來信詢問與指教，我們將儘速為您服務。
   .form
-    / 正常的輸入框
     .form-row
       .form-label 姓名
       .form-content
@@ -23,12 +22,13 @@
       .form-content
         input type="tel"
 
-    / 輸入錯誤時的 HTML 格式與警告訊息
+    /! 輸入錯誤時的 HTML 格式與警告訊息 start
     .form-row.error
       .form-label 電子信箱
       .form-content
         input type="email"
         .error-msg 格式不正確
+    /! 輸入錯誤時的 HTML 格式與警告訊息 end
 
     .form-row
       .form-label 地址

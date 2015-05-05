@@ -65,6 +65,10 @@
               cursor: default
               background-color: $color-white-a75 !important
 
+            .message
+              margin: 24px
+              font-weight: bold
+
             .sns-share
               .mail
                 background-image: url("/images/icon/icon-sns-mail.svg")
@@ -75,7 +79,6 @@
               .googleplus
                 background-image: url("/images/icon/icon-sns-gplus.svg")
 
-
   .travel-summary
     .summary-menu
       li.active
@@ -85,6 +88,21 @@
     .tab-content
       color: white
       background-color: #565151
+
+    .price
+      padding: 6px 0
+      +adjust-font-size-to(26px)
+
+    .extra-link
+      padding: 12px
+      text-align: center
+      color: white
+      background-color: darken(#565151, 10%)
+
+      a
+        color: white
+        font-weight: bold
+        text-decoration: underline
 
   .travel-record-photo, .travel-highlight, .travel-related-item, .travel-related-link
     @extend %container
@@ -174,8 +192,16 @@
 
     .travel-highlight
       .highlight-item
+        .highlight-photo
+          float: left
+          width: 35%
+
         .highlight-description
-          +adjust-font-size-to(18px, 1.2)
+          +box-sizing(border-box)
+          overflow: hidden
+          width: 65%
+          padding-left: rhythm()
+          +adjust-font-size-to(16px)
 
     .related-item-list
       margin: 0 -12px
@@ -201,11 +227,8 @@
     .travel-highlight
       .highlight-item
         .highlight-photo
-          float: left
           width: 30%
 
         .highlight-description
-          +box-sizing(border-box)
-          overflow: hidden
           width: 70%
-          padding-left: rhythm()
+          +adjust-font-size-to(18px, 1.2)

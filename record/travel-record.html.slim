@@ -9,11 +9,11 @@
 ]
 
 .travel-intro
+  /! 旅程大圖與簡介 start
   .travel-intro-header
     .travel-item.record
       .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-5.jpg"
       .travel-info-wrap
-        .badge.favorite
         .info-background style="background-image: url('/images/hero-photo/slider-5-blur.jpg')"
         .info-mask
         .travel-info
@@ -21,12 +21,10 @@
           .date 2015/05/23
           .type: img src="#{travel_types[rand(7)]}"
           p.description 由已有50年以上成功歷史的美國白鹿青少年領導訓練營精心打造，以七天的領導力訓練課程為活動主軸，透過實地任務，團體、分組作戰等遊戲環節，在反覆演練中挖掘並激發孩子潛在的領導力
-          .btn.enter 已結束
-          .sns-share
-            a.mail href="#"
-            a.facebook href="#"
-            a.googleplus href="#"
-
+          .btn.enter 此行程已結束
+          p.message 謝謝您的支持與參與，本行程已經結束，你可以參考<a href="/activities/">其他推薦行程</a>
+  /! 旅程大圖與簡介 end
+  /! 旅程印象 start
   .travel-record-photo
     h2.block-title 旅程印象
     .record-photo-list
@@ -34,19 +32,21 @@
         a.record-photo-wrap href="/images/hero-photo/slider-#{i+1}.jpg"
           .record-photo
             img src="/images/hero-photo/slider-#{i+1}.jpg"
-
+  /! 旅程印象 end
+  /! 旅程亮點 start
   .travel-highlight
     h2.block-title 旅程亮點
-    - 3.times do |i|
+    - 7.times do |i|
       .highlight-item
         img.highlight-photo src="/images/hero-photo/slider-#{i+1}.jpg"
         .highlight-description = zh_lorem_paragraphs 3
-
+  /! 旅程亮點 end
+  /! 相關連結（若無資料則整塊消失） start
   .travel-related-link
     h2.block-title 相關連結
     .related-item-list
-      - 4.times do |i|
+      - 6.times do |i|
         .related-item-wrap
           a.link-item href="#"
             .link-title = zh_lorem_words(7+rand(7))
-            .link-description = zh_lorem_words(15+rand(30))
+  /! 相關連結（若無資料則整塊消失） end

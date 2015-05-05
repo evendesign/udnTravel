@@ -38,22 +38,208 @@
         .title 填寫聯絡資訊
       li.step.complete
         .number 2
-        .title 填寫個人資訊
+        .title 確認聯絡資訊
       li.step.now
         .number 3
-        .title 填寫其他資訊
+        .title 填寫個人資訊
       li.step
         .number 4
-        .title 確認資訊
+        .title 確認個人資訊
 
     form.form
       .form-row
-        .form-label 緊急聯絡人
+        .form-label 護照英文姓名
         .form-content
           input type="text"
 
       .form-row
-        .form-label 緊急聯絡人關係
+        .form-label 護照號碼
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 護照到期日
+        .form-content
+          input type="date"
+          /! 這部分如果用原生HTML5來做，日期格式會依照各瀏覽器的設定去跑，要統一的話必須透過程式來改。
+
+      .form-row
+        .form-label 其他國家護照
+        .form-content
+          input type="text" placeholder="若沒有，請填無"
+
+      .form-row
+        .form-label 出生日期
+        .form-content
+          input type="date"
+          /! 這部分如果用原生HTML5來做，日期格式會依照各瀏覽器的設定去跑，要統一的話必須透過程式來改。
+
+      .form-row
+        .form-label 年齡
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 身分證字號
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 血型
+        .form-content
+          label.radio
+            input type="radio" name="bloodtype" O
+          label.radio
+            input type="radio" name="bloodtype" A
+          label.radio
+            input type="radio" name="bloodtype" B
+          label.radio
+            input type="radio" name="bloodtype" AB
+
+      .form-row
+        .form-label 職業
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label Line ID
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label Facebook 姓名
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label WeChat ID
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 飲食習慣
+        .form-content
+          label.form-row
+            input.checkbox type="checkbox" 一般
+          label.form-row
+            input.checkbox type="checkbox" 素食
+          label.form-row
+            input.checkbox type="checkbox" 不吃豬
+          label.form-row
+            input.checkbox type="checkbox" 不吃牛
+          label.form-row
+            input.checkbox type="checkbox" 不吃羊
+          label.form-row
+            input.checkbox.othercheckbox type="checkbox" 其他說明
+          .form-row
+            input.otherinput type="text" disabled=""
+          .form-tip 特殊餐食需求者(含飛機上),請於報名時或出發前10天告知,若無足夠時間預訂,恕無法提供。
+
+      .form-row
+        .form-label 健康狀況
+        .form-content
+          label.form-row
+            input.checkbox type="checkbox" 無
+          label.form-row
+            input.checkbox type="checkbox" 氣喘
+          label.form-row
+            input.checkbox type="checkbox" 癲癇
+          label.form-row
+            input.checkbox type="checkbox" 藥物過敏反應
+          label.form-row
+            input.checkbox type="checkbox" 蠶豆症
+          label.form-row
+            input.checkbox type="checkbox" 心臟疾病
+          label.form-row
+            input.checkbox.othercheckbox type="checkbox" 其他說明
+          .form-row
+            input.otherinput type="text" disabled="" placeholder="請說明其他任何特殊情況"
+
+      .form-row
+        .form-label 英文別名
+        .form-content
+          input type="text" placeholder="非護照名，例如：Ben, Cindy"
+
+      .form-row
+        .form-label 就讀學校科系與年級
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 身高
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 體重
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 衣服尺寸（台灣尺寸）
+        .form-content
+          label.radio
+            input type="radio" name="bloodtype" XS
+          label.radio
+            input type="radio" name="bloodtype" S
+          label.radio
+            input type="radio" name="bloodtype" M
+          label.radio
+            input type="radio" name="bloodtype" L
+          label.radio
+            input type="radio" name="bloodtype" XL
+
+      .form-row
+        .form-label 鞋子尺寸（美國尺寸）
+        .form-content
+          input type="number"
+
+      .form-row
+        .form-label 專長/特殊才藝
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 英文程度
+        .form-content
+          label.radio
+            input type="radio" name="bloodtype" 不會
+          label.radio
+            input type="radio" name="bloodtype" 差
+          label.radio
+            input type="radio" name="bloodtype" 中等
+          label.radio
+            input type="radio" name="bloodtype" 好
+          label.radio
+            input type="radio" name="bloodtype" 極佳
+          label.radio
+            input type="radio" name="bloodtype" 母語人
+
+      .form-row
+        .form-label 英文檢定分數
+        .form-content
+          input type="text" placeholder="例如：TOEIC, IETLS"
+
+      .form-row
+        .form-label 指定同房人姓名
+        .form-content
+          input type="text" placeholder="若無，請填無"
+
+      .form-row
+        .form-label 使用字體
+        .form-content
+          label.radio
+            input type="radio" name="bloodtype" 繁體
+          label.radio
+            input type="radio" name="bloodtype" 簡體
+
+      .form-row
+        .form-label 緊急聯絡人姓名
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 與緊急聯絡人關係
         .form-content
           input type="text"
 
@@ -76,6 +262,57 @@
             input.checkbox type="checkbox" 高空跳傘
           label.form-row
             input.checkbox type="checkbox" 熱氣球
+
+      .form-row
+        .form-label 需要接機
+        .form-content
+          label.radio
+            input type="radio" name="bloodtype" 是
+          label.radio
+            input type="radio" name="bloodtype" 否
+
+      .form-row
+        .form-label 需要送機
+        .form-content
+          label.radio
+            input type="radio" name="bloodtype" 是
+          label.radio
+            input type="radio" name="bloodtype" 否
+
+      .form-row
+        .form-label 家長姓名
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 家長與學員的關係
+        .form-content
+          input type="text"
+
+      .form-row
+        .form-label 家長電子信箱
+        .form-content
+          input type="email"
+
+      .form-row
+        .form-label 家長住所電話
+        .form-content
+          input type="tel"
+
+      .form-row
+        .form-label 家長辦公電話
+        .form-content
+          input type="tel"
+
+      .form-row
+        .form-label 家長行動電話
+        .form-content
+          input type="tel"
+
+      .form-row
+        .form-label 台灣聯絡電話
+        .form-content
+          input type="tel"
 
       .form-row
         .form-label 如何得知活動訊息

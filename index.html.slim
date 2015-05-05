@@ -16,20 +16,25 @@
   ['/images/icon/icon-item-music.svg'],\
   ['/images/icon/icon-item-photography.svg'],\
 ]
-
+/! 首頁 slider 區塊 start
 .hero
   .hero-holder
     .hero-slider-for
       - 9.times do |i|
         a.hero-photo href="/activities/travel-intro.html"
           img.hero-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
-
+          /! 圖片文字浮水印區塊 start
+          .hero-content
+            .date 2015/05/0#{i+1}
+            .title 澄金秋彩紐西蘭南島攝影漫遊
+          /! 圖片文字浮水印區塊 end
     .hero-slider-nav-wrap
       .hero-slider-nav
         - 9.times do |i|
           .hero-photo
             img src="/images/hero-photo/slider-#{i+1}.jpg"
-
+/! 首頁 slider 區塊 end
+/! 旅程分類 start
 .itinerary-type
   a.type-item href="/activities/"
     img.icon src="/images/icon/icon-item-all.svg"
@@ -62,9 +67,10 @@
   a.type-item href="/activities/"
     img.icon src="/images/icon/icon-item-camp.svg"
     .name 主題營隊
-
+/! 旅程分類 end
 .travel-activities
   - 6.times do |i|
+    /! 首頁單一旅程區塊 start
     a.travel-item href="/activities/travel-intro.html"
       .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg" id="travel-photo-img-#{i+1}" onload='loaded(this.id)'
       .travel-info-wrap
@@ -77,6 +83,7 @@
           .type: img src="#{travel_types_wt[rand(7)]}"
           p.description 由已有50年以上成功歷史的美國白鹿青少年領導訓練營精心打造，以七天的領導力訓練課程為活動主軸，透過實地任務，團體、分組作戰等遊戲環節，在反覆演練中挖掘並激發孩子潛在的領導力
           .btn.enter 詳細內容
+    /! 首頁單一旅程區塊 end
 
 .travel-record
   .travel-record-title
@@ -84,6 +91,7 @@
     a.btn href="/record/" 看更多
   - 2.times do |i|
     .record-wrap
+      /! 首頁單一活動集錦大區塊 start
       a.record-item.big href="/record/travel-record.html"
         .record-photo: img src="/images/hero-photo/slider-1.jpg"
         .record-info-wrap
@@ -92,8 +100,9 @@
             .type: img src="#{travel_types_wt[rand(7)]}"
             h3.title 澄金秋彩紐西蘭南島攝影漫遊
             .date 2015/05/23
-
+      /! 首頁單一活動集錦大區塊 end
       - 4.times do |i|
+        /! 首頁單一活動集錦小區塊 start
         a.record-item href="/record/travel-record.html"
           .record-photo: img src="/images/hero-photo/slider-#{i+2}.jpg"
           .record-info-wrap
@@ -102,6 +111,7 @@
               .type: img src="#{travel_types_wt[rand(7)]}"
               h3.title 澄金秋彩紐西蘭南島攝影漫遊
               .date 2015/05/23
+        /! 首頁單一活動集錦小區塊 end
 
 a.fb-page target="_blank" href="#"
   span 快加入

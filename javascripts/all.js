@@ -16,7 +16,7 @@ $(function(){
       dots: false,
       centerMode: true,
       focusOnSelect: true,
-      autoplay: true,
+      autoplay: false,
       responsive: [
         {
           breakpoint: 640,

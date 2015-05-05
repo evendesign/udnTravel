@@ -4,7 +4,6 @@ function loaded(id) {
   img.src = targetTag.attr('src');
 
   var interval = window.setInterval(function () {
-    // console.log('img loading');
   }, 250);
   img.onload = function () { window.clearInterval(interval); }
 
@@ -18,7 +17,6 @@ function loaded(id) {
   if (deepcolor[0] < 0) { deepcolor[0] = 0; };
   if (deepcolor[1] < 0) { deepcolor[1] = 0; };
   if (deepcolor[2] < 0) { deepcolor[2] = 0; };
-  // console.log(deepcolor);
 
   targetTag.parents('.travel-item').find('.enter').css('background-color', "rgb(" + deepcolor + ")");
 }

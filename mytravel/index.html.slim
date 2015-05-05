@@ -14,44 +14,40 @@
       span.ch 我的旅遊
       span.en My Travel
 
-.mytravel
-  ul.summary-menu
-    li.active: a data-toggle="tab" href="#follow"
-      img.icon src="/images/icon/icon-tab-follow.svg"
-      .span 我的追蹤
-    li: a data-toggle="tab" href="#favorite"
-      img.icon src="/images/icon/icon-tab-favorite.svg"
-      .span 我的收藏
-
-  .tab-content
-    #follow.travel-list.tab-pane.fade.in.active
-      .travel-list-inner
-        - 4.times do |i|
-          .travel-list-item
-            a.travel-item href="/activities/travel-intro.html"
-              .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
-              .travel-info-wrap
-                .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
-                .info-mask
-                .travel-info
-                  h2.title 澄金秋彩紐西蘭南島攝影漫遊
-                  .type: img src="#{travel_types_wt[rand(7)]}"
-                  .date 2015/05/23
-            .update-log
-              .title 最新消息
-              span.date = lorem_date.to_date
-              .info 新增第三天詳細行程
-
-    #favorite.travel-list.tab-pane.fade
-      .travel-list-inner
-        - 6.times do |i|
-          .travel-list-item
-            a.travel-item href="/record/travel-record.html"
-              .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
-              .travel-info-wrap
-                .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
-                .info-mask
-                .travel-info
-                  h2.title 澄金秋彩紐西蘭南島攝影漫遊
-                  .type: img src="#{travel_types_wt[rand(7)]}"
-                  .date 2015/05/23
+/! 我的旅遊列表 start
+.travel-list.mytravel
+  .travel-list-inner
+    - 5.times do |i|
+      /! 單一旅程區塊 start
+      .travel-list-item
+        .badge.follow.active
+        a.travel-item href="/activities/travel-intro.html"
+          .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
+          .travel-info-wrap
+            .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
+            .info-mask
+            .travel-info
+              h2.title 澄金秋彩紐西蘭南島攝影漫遊
+              .type: img src="#{travel_types_wt[rand(7)]}"
+              .date 2015/05/23
+        .update-log 確定出團 日期：2015/08/17
+      /! 單一旅程區塊 end
+    - 5.times do |i|
+      /! 單一旅程區塊 start
+      .travel-list-item
+        .badge.follow.active
+        a.travel-item href="/activities/travel-intro.html"
+          .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
+          .travel-info-wrap
+            .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
+            .info-mask
+            .travel-info
+              h2.title 澄金秋彩紐西蘭南島攝影漫遊
+              .type: img src="#{travel_types_wt[rand(7)]}"
+              .date 2015/05/23
+        .update-log 尚未成團
+      /! 單一旅程區塊 end
+  /! 內容分頁 start
+  = render "/partial/pagination"
+  /! 內容分頁 end
+/! 我的旅遊列表 end

@@ -1,0 +1,36 @@
+.table
+  width: 100%
+  +adjust-font-size-to(16px)
+
+  tr
+    display: block
+    padding: 6px
+
+
+  tr:nth-child(2n+1)
+    border-top: 1px solid $color-white-a10
+
+  tr:first-child
+    border-top: none
+
+  th
+    display: none
+
+  td
+    display: block
+    padding: 0 6px
+
+  +at-breakpoint($pad)
+    tr
+      display: table-row
+
+    tr:nth-child(2n+1)
+      border-top: none
+
+    th, td
+      display: table-cell
+      padding: 3px 6px
+      text-align: left
+
+    th
+      border-bottom: 1px solid $color-white-a10

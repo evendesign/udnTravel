@@ -33,56 +33,55 @@
     ul.summary-menu
       li.active: a data-toggle="tab" href="#overview"
         img.icon src="/images/icon/icon-tab-summary.svg"
-        .span 旅程總覽
-      li: a data-toggle="tab" href="#flight"
-        img.icon src="/images/icon/icon-tab-flight.svg"
-        .span 航班
+        .span 講座總覽
+      li: a data-toggle="tab" href="#place"
+        img.icon src="/images/icon/icon-tab-place.svg"
+        .span 地點
       li: a data-toggle="tab" href="#fee"
         img.icon src="/images/icon/icon-tab-fee.svg"
-        .span 團費
+        .span 費用
       li: a data-toggle="tab" href="#notice"
         img.icon src="/images/icon/icon-tab-notice.svg"
         .span 貼心提醒
 
     .tab-content.summary-content
       #overview.tab-pane.fade.in.active
-        p = zh_lorem_paragraphs 2
-      #flight.tab-pane.fade
         table.table
           tr
-            th 班機
-            th 日期
-            th 出發-抵達地
-            th 出發時間
-            th 抵達時間
-          - 2.times do |i|
-            tr
-              td 華航XXXX
-              td 2015/05/29
-              td 台北-大阪
-              td 2015/05/29 23:00
-              td 2015/05/30 01:00
+            th 場次
+            th 時間
+            th 主題
+          tr
+            td 第一場
+            td 3/19(四) 19:00~21:30
+            td = zh_lorem_words 7+rand(7)
+          tr
+            td 第二場
+            td 3/26(四) 19:00~21:30
+            td = zh_lorem_words 7+rand(7)
+          tr
+            td 第三場
+            td 4/09(四) 19:00~21:30
+            td = zh_lorem_words 7+rand(7)
+          tr
+            td 第四場
+            td 4/16(四) 19:00~21:30
+            td = zh_lorem_words 7+rand(7)
 
+      #place.tab-pane.fade
+        p = zh_lorem_paragraphs 2
       #fee.tab-pane.fade
-        .price NTD.82,000
+        .price NTD.1,600
         p = zh_lorem_paragraph
       #notice.tab-pane.fade
         p = zh_lorem_paragraphs 2
       .summary-content-dl
         a.btn href="#" 下載完整旅程內容
-    .extra-link 本旅程有開設相關講座，<a href="/talk/talk-intro.html">請點此前往</a>。
+    .extra-link 本講座的相關旅程 <a href="/activities/travel-intro.html">請點此前往</a> 。
   /! 旅程總覽 end
-  /! 旅程亮點 start
-  .travel-highlight
-    h2.block-title 旅程亮點
-    - 7.times do |i|
-      .highlight-item
-        img.highlight-photo src="/images/hero-photo/slider-#{i+1}.jpg"
-        .highlight-description = zh_lorem_paragraphs 3
-  /! 旅程亮點 end
-  /! 活動集錦（若無資料則整塊消失） start
+  /! 最新活動（若無資料則整塊消失） start
   .travel-related-item
-    h2.block-title 活動集錦
+    h2.block-title 最新活動
     .related-item-list
       - 4.times do |i|
         .related-item-wrap
@@ -95,7 +94,7 @@
                 .badge
                 h2.title 澄金秋彩紐西蘭南島攝影漫遊
                 .date 2015/05/23
-  /! 活動集錦 end
+  /! 最新活動 end
   /! 相關連結（若無資料則整塊消失） start
   .travel-related-link
     h2.block-title 相關連結

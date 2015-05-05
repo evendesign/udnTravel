@@ -39,121 +39,40 @@
       li.step.now
         .number 2
         .title 填寫個人資訊
-      li.step
-        .number 3
-        .title 填寫其他資訊
-      li.step
-        .number 4
-        .title 確認資訊
 
-    form.form
+    .form
       .form-row
-        .form-label 護照姓名
-        .form-content
-          input type="text"
+        .form-label.required 中文姓名
+        .form-content = zh_lorem_name
 
       .form-row
-        .form-label 護照號碼
-        .form-content
-          input type="text"
+        .form-label.required 性別
+        .form-content 女
 
       .form-row
-        .form-label 護照到期日
-        .form-content
-          input type="text"
+        .form-label.required 聯絡電話
+        .form-content 0912345678
 
       .form-row
-        .form-label 他國護照
-        .form-content
-          input type="text" placeholder="若沒有，請填無"
+        .form-label.required 電子信箱
+        .form-content = lorem_email
 
       .form-row
-        .form-label 出生日期
-        .form-content
-          input type="text"
+        .form-label 通訊地址
+        .form-content 新北市汐止區大同路1段369號
 
       .form-row
-        .form-label 年齡
+        .form-label 注意事項
         .form-content
-          input type="text"
-
-      .form-row
-        .form-label 身分證字號
-        .form-content
-          input type="text"
-
-      .form-row
-        .form-label 血型
-        .form-content
-          label.radio
-            input type="radio" name="bloodtype" O
-          label.radio
-            input type="radio" name="bloodtype" A
-          label.radio
-            input type="radio" name="bloodtype" B
-          label.radio
-            input type="radio" name="bloodtype" AB
-
-      .form-row
-        .form-label 職業
-        .form-content
-          input type="text"
-
-      .form-row
-        .form-label Line ID
-        .form-content
-          input type="text"
-
-      .form-row
-        .form-label Facebook Account
-        .form-content
-          input type="text"
-
-      .form-row
-        .form-label WeChat ID
-        .form-content
-          input type="text"
-
-      .form-row
-        .form-label 飲食習慣
-        .form-content
-          label.form-row
-            input.checkbox type="checkbox" 一般
-          label.form-row
-            input.checkbox type="checkbox" 素食
-          label.form-row
-            input.checkbox type="checkbox" 不吃豬
-          label.form-row
-            input.checkbox type="checkbox" 不吃牛
-          label.form-row
-            input.checkbox type="checkbox" 不吃羊
-          label.form-row
-            input.checkbox.othercheckbox type="checkbox" 其他說明
-          .form-row
-            input.otherinput type="text" disabled=""
-
-      .form-row
-        .form-label 健康狀況
-        .form-content
-          label.form-row
-            input.checkbox type="checkbox" 無
-          label.form-row
-            input.checkbox type="checkbox" 氣喘
-          label.form-row
-            input.checkbox type="checkbox" 癲癇
-          label.form-row
-            input.checkbox type="checkbox" 藥物過敏反應
-          label.form-row
-            input.checkbox type="checkbox" 蠶豆症
-          label.form-row
-            input.checkbox type="checkbox" 心臟疾病
-          label.form-row
-            input.checkbox.othercheckbox type="checkbox" 其他說明
-          .form-row
-            input.otherinput type="text" disabled="" placeholder="請說明其他任何特出情況"
+          ol
+            li 凡患有心臟病、氣喘病、高血壓、癲癇症、糖尿病、嚴重感冒發燒或其他特殊疾病，而不適合參加活動者，請勿報名；如違規定應自行負責。
+            li 若需要提供特殊之餐飲及醫療照顧（如患有慢性病）請醫生出具診斷證明，並附詳細說明，以便我們提供更周到的服務。
+            li 您所提供的資料將提供為聯合行旅使用，請務必確認資訊正確無誤，以利報名進行。
 
       .form-row
         .form-label
         .form-content.buttonbox
-          a href="/register/travel/step3.html"
-            input.btn type="button" value="下一步"
+          a href="/register/success-travel.html"
+            input.btn type="button" value="確認送出"
+          a href="/register/talk/step1.html"
+            input.btn type="button" value="修改"

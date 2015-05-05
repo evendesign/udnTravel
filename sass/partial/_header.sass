@@ -42,18 +42,13 @@
 
   .logo
     a
-      +inline-block()
-      +rhythm(1,0,0,1)
-      +adjust-font-size-to(32px)
-      text-decoration: none
-      color: $color-black
-
-      .ch
-        font-weight: bold
-
-      .en
-        display: block
-        +adjust-font-size-to(16px, .75)
+      display: block
+      margin: 0 auto
+      width: 196px
+      height: 56px
+      +rhythm(1.5,0,0,1.5)
+      +hide-text()
+      background: url("/images/logo.svg") no-repeat center
 
   .menu-btn
     display: block
@@ -69,15 +64,14 @@
     padding: 0
     list-style: none
 
-    li
-      a
-        +link-colors($color-black, $color-black-light)
-        display: block
-        +padding-leader(.5)
-        +padding-trailer(.5)
-        text-decoration: none
-        border-top: 1px solid $color-gray-light
-
+    a
+      +link-colors($color-black, $color-blue-dark)
+      display: block
+      +rhythm(0,.5,.5,0)
+      font-weight: bold
+      text-decoration: none
+      border-top: 1px solid $color-gray-light
+      +transition(color .1s)
 
   +at-breakpoint($pad)
     .menu-btn

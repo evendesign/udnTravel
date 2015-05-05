@@ -1,18 +1,7 @@
 .mytravel
-  .summary-menu
-    li
-      width: 50%
-    li.active
-      &:after
-        border-bottom: 12px solid white
-
-  .tab-content
-    padding: 6px 0
-
-    .tab-pane
-      max-width: 1088px
-      margin: 0 auto
-      padding: 0
+  .travel-list-item
+    .badge
+      right: 6px
 
   .update-log
     +pie-clearfix
@@ -33,13 +22,6 @@
     .info
       display: inline-block
       +adjust-font-size-to(15px, 1.5)
-
-
-  .travel-list-item
-    .type
-      img
-        width: 32px
-        height: 32px
 
   .empty-item
     position: relative
@@ -63,40 +45,17 @@
       background: url("/images/empty-icon-favorite.svg") no-repeat
 
   +at-breakpoint($pad)
-    .summary-menu
-      li
-        max-width: 544px
-        width: 50%
+    .travel-list-item
+      .badge
+        top: 6px
 
     .update-log
-      text-align: left
-
-      .title
-        float: left
-        padding: 3px 15px
-
-      .date
-        float: left
-        padding: 3px 6px 3px 12px
-
-      .info
-        display: block
-        margin-right: 12px
-        padding: 3px 0
-        +ellipsis
-
-    .travel-list-item
-      +box-sizing(border-box)
-      float: left
-      width: 50%
-      padding: 6px
+      text-align: center
+      padding: 3px 12px
+      +ellipsis
 
     .update-log
       margin: 0
 
     .empty-item
       margin: 0 0 24px
-
-  +at-breakpoint($desktop)
-    .tab-content
-      +rhythm(0,2,2,0)

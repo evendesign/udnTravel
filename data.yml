@@ -1,4 +1,4 @@
-site-url: "http://localhost:3000"
+site-url: "http://utravel.udn.com"
 site-name: "uTravel"
 site-title: "有・行旅 uTravel"
 site-keywords: ""
@@ -6,5 +6,5 @@ site-description: ""
 
 
 # og-type: "website"
-# og-image: "http://localhost:3000/fb.png"
+# og-image: "http://utravel.udn.com/fb.png"
 # fb-admins: "123456"

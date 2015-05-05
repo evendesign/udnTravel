@@ -13,7 +13,7 @@
     h2.page-title
       span.ch 最新活動
       span.en Activities
-
+/! 旅程分類 start
 .travel-filter
   .itinerary-type
     a.type-item.active href="/activities/"
@@ -47,33 +47,12 @@
     a.type-item href="/activities/"
       img.icon src="/images/icon/icon-item-camp.svg"
       .name 主題營隊
-
-  .nav.collapse#travel-extra-option
-    .travel-time
-      .label 時間
-      .option-set
-        .option.active 1～2月
-        .option 3～4月
-        .option 5～6月
-        .option 7～8月
-        .option 9～10月
-        .option 11～12月
-    .travel-location
-      .label 地點
-      .option-set
-        .option.active 台北
-        .option 倫敦
-        .option 巴黎
-        .option 柏林
-        .option 東京
-        .option 紐約
-
-.find-travel
-  a.extra-option-btn data-toggle="collapse" href="#travel-extra-option" 找旅程
-
+/! 旅程分類 end
+/! 旅程列表 start
 .travel-list
   .travel-list-inner
     - 10.times do |i|
+      /! 單一旅程區塊 start
       .travel-list-item
         a.travel-item href="/activities/travel-intro.html"
           .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
@@ -84,5 +63,8 @@
               h2.title 澄金秋彩紐西蘭南島攝影漫遊
               .type: img src="#{travel_types_wt[rand(7)]}"
               .date 2015/05/23
-
-= render "/partial/pagination"
+      /! 單一旅程區塊 end
+  /! 內容分頁 start
+  = render "/partial/pagination"
+  /! 內容分頁 end
+/! 旅程列表 end

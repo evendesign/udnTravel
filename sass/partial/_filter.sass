@@ -47,15 +47,19 @@ $travel-filter-bg: #F6F7F8
   +rhythm(0,.25,.25,0)
   background-color: $travel-filter-bg
 
-  .extra-btn
-    position: absolute
-    bottom: 0
-    left: 50%
-
-  #travel-extra-option
+  .travel-extra-option
     max-width: 1088px
     margin: 0 auto
     padding: 0 rhythm(.5)
+
+    .find-travel
+      text-align: right
+      border-top: 1px solid $color-black-a10
+
+      .btn
+        margin: 6px auto
+        padding: 3px 24px
+        +adjust-font-size-to(13px)
 
     .travel-time, .travel-location
       position: relative
@@ -67,7 +71,7 @@ $travel-filter-bg: #F6F7F8
         top: 0
         left: 0
         z-index: 10
-        +rhythm(0,.25,.25,0)
+        padding-top: 8px
         padding-right: 12px
         font-weight: bold
         background-color: $travel-filter-bg
@@ -90,15 +94,15 @@ $travel-filter-bg: #F6F7F8
         &.active
           background-color: $color-black-a10
 
-.find-travel
+.find-travel-collapse
   max-width: 1088px
   margin: 0 auto
   padding: 0 rhythm(.25) 3px
-  text-align: right
+  text-align: center
 
   .extra-option-btn
     position: relative
-    padding: 3px 48px 3px 24px
+    padding: 3px 48px
     text-decoration: none
     color: $color-black
     background-color: $travel-filter-bg
@@ -108,8 +112,9 @@ $travel-filter-bg: #F6F7F8
       content: ""
       position: absolute
       top: 50%
-      right: 24px
+      left: 50%
       margin-top: -3px
+      margin-left: -6px
       border: 6px solid transparent
       border-top-color: $color-black
 

@@ -21,25 +21,6 @@
     position: relative
     overflow: hidden
 
-  .badge
-    position: absolute
-    z-index: 20
-    top: 0
-    right: 0
-    cursor: pointer
-
-    &.favorite
-      +replace-text-with-svg("favorite")
-
-    &.favorite.active
-      +replace-text-with-svg("favorite-active")
-
-    &.follow
-      +replace-text-with-svg("follow")
-
-    &.follow.active
-      +replace-text-with-svg("follow-active")
-
   .info-background
     position: absolute
     top: 0
@@ -139,3 +120,16 @@
       top: 50%
       padding: 0 48px
       +translateY(-50%)
+
+.badge
+  position: absolute
+  z-index: 20
+  top: 0
+  right: 0
+  cursor: pointer
+
+  &.follow
+    +replace-text-with-svg("follow")
+
+  &.follow.active
+    +replace-text-with-svg("follow-active")
