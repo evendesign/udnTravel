@@ -126,10 +126,43 @@
   z-index: 20
   top: 0
   right: 0
+  width: 56px
+  height: 56px
   cursor: pointer
 
+  .msg
+    display: none
+
+  &:hover
+    .msg
+      display: block
+      position: absolute
+      left: -96px
+      right: 40px
+
+      span
+        display: inline-block
+        position: absolute
+        top: 3px
+        right: 0
+        z-index: 25
+        padding: 3px 6px
+        +adjust-font-size-to(13px)
+        color: $color-black
+        background-color: $color-white-a75
+        +border-radius(3px)
+
+        &:after
+          content: ""
+          position: absolute
+          top: 50%
+          right: -12px
+          margin-top: -6px
+          border: 6px solid transparent
+          border-left-color: $color-white-a75
+
   &.follow
-    +replace-text-with-svg("follow")
+    background: url("/images/follow.svg") center no-repeat
 
   &.follow.active
-    +replace-text-with-svg("follow-active")
+    background: url("/images/follow-active.svg") center no-repeat

@@ -15,6 +15,9 @@
       .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-5.jpg" id="travel-photo-img-5" onload='loaded(this.id)'
       .travel-info-wrap
         .badge.follow
+          .msg: span 收藏
+          /! .msg: span 請登入會員
+          /! 上面註解的 code 為尚未登入會員的狀態
         .info-background style="background-image: url('/images/hero-photo/slider-5-blur.jpg')"
         .info-mask
         .travel-info
@@ -50,18 +53,24 @@
       #flight.tab-pane.fade
         table.table
           tr
-            th 班機
-            th 日期
-            th 出發-抵達地
-            th 出發時間
+            th 班機日期
+            th 星期
+            th 起飛城市
+            th 抵達城市
+            th 航空公司
+            th 班機編號
+            th 起飛時間
             th 抵達時間
-          - 2.times do |i|
+          - 10.times do |i|
             tr
-              td 華航XXXX
               td 2015/05/29
-              td 台北-大阪
-              td 2015/05/29 23:00
-              td 2015/05/30 01:00
+              td 五
+              td 台北（桃園）
+              td 阿姆施特丹
+              td 中華
+              td CI065
+              td 22:05
+              td 09:15+1
 
       #fee.tab-pane.fade
         .price NTD.82,000

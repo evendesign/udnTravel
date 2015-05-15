@@ -7,10 +7,10 @@
     padding: 6px
 
 
-  tr:nth-child(2n+1)
+  tr + tr
     border-top: 1px solid $color-white-a10
 
-  tr:first-child
+  tr:nth-child(2)
     border-top: none
 
   th
@@ -24,7 +24,7 @@
     tr
       display: table-row
 
-    tr:nth-child(2n+1)
+    tr + tr
       border-top: none
 
     th, td
