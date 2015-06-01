@@ -26,7 +26,7 @@
   .empty-item
     position: relative
     margin: 0 6px 48px
-    padding: 72px 48px
+    padding: 72px 24px
     text-align: center
     +adjust-font-size-to(21px)
     color: $color-black-a50
@@ -43,6 +43,9 @@
 
     .empty-favorite-icon
       background: url("/images/empty-icon-favorite.svg") no-repeat
+
+  .mytravel-help
+    +leader()
 
   +at-breakpoint($pad)
     .travel-list-item
