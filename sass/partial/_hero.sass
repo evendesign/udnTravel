@@ -11,18 +11,20 @@
     opacity: 0
     +transition(opacity, .25s, 1s)
 
-
     &.active
       opacity: 1
 
   .hero-slider-for
+    text-align: center
+
     .hero-content
       position: absolute
       left: 0
       right: 0
       bottom: 0
-      padding: 48px 12px 12px
+      padding: 64px 12px 0px
       color: white
+      font-weight: bold
       background-color: rgba(0,0,0,.35)
       +background(linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.75)))
       +text-shadow(0 1px 3px rgba(0,0,0,.25))
@@ -30,6 +32,12 @@
       .title
         +adjust-font-size-to(18px)
         font-weight: bold
+
+      .date, p
+        +adjust-font-size-to(13px, .75)
+
+      .date
+        +trailer(.5)
 
   .hero-slider-nav
     overflow: hidden
@@ -99,12 +107,16 @@
       z-index: 1000
 
     .hero-slider-for
+
       .hero-content
-        padding: 48px 24px 24px
+        padding: 72px 24px 6px
         bottom: calc(14.5% + 24px)
 
         .title
-          +adjust-font-size-to(32px)
+          +adjust-font-size-to(28px)
+
+        .date, p
+          +adjust-font-size-to(16px)
 
     .hero-slider-nav
       background-color: rgba(255,255,255,.5)

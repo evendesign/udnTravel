@@ -17,7 +17,6 @@
 .record-wrap
   +pie-clearfix
 
-
   .record-item
     +pie-clearfix
     display: block
@@ -31,8 +30,14 @@
           background-color: rgba(0,0,0,.7)
 
     .record-photo
+      position: relative
+      padding-top: 66.5625%
+      overflow: hidden
+
       img
         display: block
+        position: absolute
+        top: 0
 
 
     .record-info-wrap
@@ -133,6 +138,7 @@
       right: 48px
 
   .record-wrap
+    background-color: $color-blue-dark
 
     .record-item
       float: left
@@ -186,7 +192,7 @@
 
     .record-item
       float: left
-      width: 25%
+      width: 33.33333%
       margin: 0
 
       .record-info-wrap
