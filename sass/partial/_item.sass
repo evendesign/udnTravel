@@ -50,7 +50,7 @@
   .travel-info
     position: relative
     z-index: 10
-    padding: 36px 24px
+    padding: 48px 1em
     text-align: center
     color: white
 
@@ -134,8 +134,8 @@
   z-index: 20
   top: 0
   right: 0
-  width: 56px
-  height: 56px
+  width: 100px
+  height: 36px
   cursor: pointer
 
   .msg
@@ -143,7 +143,6 @@
 
   &:hover
     .msg
-      display: block
       position: absolute
       left: -96px
       right: 40px
@@ -170,7 +169,21 @@
           border-left-color: $color-white-a75
 
   &.follow
-    background: url("/images/follow.svg") center no-repeat
+    background: url("/images/follow-mobile.svg") center no-repeat
 
   &.follow.active
-    background: url("/images/follow-active.svg") center no-repeat
+    background: url("/images/follow-mobile-active.svg") center no-repeat
+
+  +at-breakpoint($desktop)
+    width: 56px
+    height: 56px
+
+    &:hover
+      .msg
+        display: block
+
+    &.follow
+      background: url("/images/follow.svg") center no-repeat
+
+    &.follow.active
+      background: url("/images/follow-active.svg") center no-repeat

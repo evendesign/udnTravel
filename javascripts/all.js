@@ -39,7 +39,10 @@ $(function(){
   $('.record-photo-wrap').magnificPopup({
     type:'image',
     removalDelay: 300,
-    mainClass: 'mfp-fade'
+    mainClass: 'mfp-fade',
+    gallery: {
+      enabled: true
+    }
   });
 
   $('.option').on('click', function(){

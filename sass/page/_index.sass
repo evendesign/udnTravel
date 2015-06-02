@@ -102,17 +102,32 @@
           +inline-block()
 
 .fb-page
-  $fb-color-blue: #4A6CA0
+  +pie-clearfix
   display: block
-  padding: rhythm(1.5)
-  +adjust-font-size-to(32px, 1.75)
-  text-align: center
-  background-color: $fb-color-blue
-  +transition(background-color .25s)
 
-  &:hover
-    text-decoration: none
-    background-color: lighten($fb-color-blue, 3%)
+  a
+    +box-sizing(border-box)
+    display: block
+    padding: rhythm(1.5) 0
+    +adjust-font-size-to(28px, 1.75)
+    text-align: center
+    +transition(background-color .25s)
+
+    &.fb-page-utravel
+      $fb-color-blue: #4A6CA0
+      background-color: $fb-color-blue
+
+      &:hover
+        text-decoration: none
+        background-color: lighten($fb-color-blue, 3%)
+
+    &.fb-page-udncamp
+      $fb-color-purple: #62448B
+      background-color: $fb-color-purple
+
+      &:hover
+        text-decoration: none
+        background-color: lighten($fb-color-purple, 3%)
 
   span
     display: block
@@ -153,7 +168,8 @@
         width: 100%
 
   .fb-page
-    +adjust-font-size-to(36px)
+    a
+      +adjust-font-size-to(28px)
 
     span
       +inline-block()
@@ -165,7 +181,7 @@
       &:after
         content: ""
         position: absolute
-        top: -7px
+        top: -9px
         right: 12px
         width: 64px
         height: 64px
@@ -201,3 +217,8 @@
 
       &.big
         width: 50%
+
+  .fb-page
+    a
+      float: left
+      width: 50%
