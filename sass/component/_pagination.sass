@@ -37,9 +37,9 @@ $pagination-disable-bg-color: $pagination-bg-color !default
 
   a, span
     display: block
-    padding: rhythm(0.125) rhythm(0.5)
+    padding: rhythm(0.1) rhythm(0.3)
     text-align: center
-    +adjust-font-size-to(15px)
+    +adjust-font-size-to(13px)
     color: $pagination-color
     background-color: $pagination-bg-color
 
@@ -60,5 +60,6 @@ $pagination-disable-bg-color: $pagination-bg-color !default
 
   +at-breakpoint($pad)
     a, span
+      padding: rhythm(0.125) rhythm(0.5)
       +adjust-font-size-to(16px)
 
