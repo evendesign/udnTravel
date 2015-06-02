@@ -1,7 +1,10 @@
 ul.pagination
   li: span.is-disable &laquo;
-  li: a.is-current href="#" 1
-  - 4.times do |i|
-    li: a href="#"= ( i+2 )
+  li: a href="#" 1
   li: span.is-disabled …
+  li: a.is-current href="#" 4
+  - 4.times do |i|
+    li: a href="#"= ( i+5 )
+  li: span.is-disabled …
+  li: a href="#" 15
   li: a href="#" &raquo;
