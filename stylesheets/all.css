@@ -531,6 +531,8 @@ label.form-row { display: block; }
 .travel-intro .travel-summary .extra-link { padding: 12px; text-align: center; color: white; background-color: #3c3838; }
 .travel-intro .travel-summary .extra-link a { color: white; font-weight: bold; text-decoration: underline; }
 .travel-intro .travel-record-photo, .travel-intro .travel-highlight, .travel-intro .travel-related-item, .travel-intro .travel-related-link { margin-top: 48px; padding-top: 0px; padding-bottom: 0px; margin-bottom: 48px; max-width: 960px; }
+.travel-intro .travel-highlight .highlight-item .highlight-photo-wrap { position: relative; overflow: hidden; margin-bottom: 6px; padding-top: 66.5625%; }
+.travel-intro .travel-highlight .highlight-item .highlight-photo-wrap .highlight-photo { position: absolute; top: 0; }
 .travel-intro .related-item-list:after { content: ""; display: table; clear: both; }
 .travel-intro .related-item-wrap .travel-item { margin: 16px 0; }
 .travel-intro .related-item-wrap .travel-item .travel-info-wrap .travel-info { padding: 24px; }
@@ -550,14 +552,14 @@ label.form-row { display: block; }
 .travel-intro #flight { overflow-x: auto; }
 @media (min-width: 47em) { .travel-intro .travel-record-photo, .travel-intro .travel-highlight, .travel-intro .travel-related-item, .travel-intro .travel-related-link { margin-top: 96px; padding-top: 0px; padding-bottom: 0px; margin-bottom: 96px; }
   .travel-intro .travel-record-photo .record-photo-wrap { width: 33.333%; }
-  .travel-intro .travel-highlight .highlight-item .highlight-photo { float: left; width: 35%; }
+  .travel-intro .travel-highlight .highlight-item .highlight-photo-wrap { float: left; width: 35%; padding-top: 23.29688%; }
   .travel-intro .travel-highlight .highlight-item .highlight-description { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; overflow: hidden; width: 65%; padding-left: 24px; font-size: 16px; line-height: 24px; }
   .travel-intro .related-item-list { margin: 0 -12px; }
   .travel-intro .related-item-wrap { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 50%; padding: 12px; }
   .travel-intro .related-item-wrap .travel-item { margin: 0; }
   .travel-intro .related-item-wrap .link-item { margin-bottom: 12px; } }
 @media (min-width: 71em) { .travel-intro .travel-record-photo .record-photo-wrap { width: 25%; }
-  .travel-intro .travel-highlight .highlight-item .highlight-photo { width: 30%; }
+  .travel-intro .travel-highlight .highlight-item .highlight-photo-wrap { width: 30%; padding-top: 19.96875%; }
   .travel-intro .travel-highlight .highlight-item .highlight-description { width: 70%; font-size: 18px; line-height: 28px; } }
 
 .travel-list { max-width: 1088px; margin: 24px auto; }

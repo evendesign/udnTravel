@@ -88,7 +88,8 @@
     h2.block-title 旅程亮點
     - 7.times do |i|
       .highlight-item
-        img.highlight-photo src="/images/hero-photo/slider-#{i+1}.jpg"
+        .highlight-photo-wrap
+          img.highlight-photo src="/images/hero-photo/slider-#{i+1}.jpg"
         .highlight-description = zh_lorem_paragraphs 3
   /! 旅程亮點 end
   /! 活動集錦（若無資料則整塊消失） start
