@@ -1,30 +1,13 @@
 $(function(){
   if ( $('.hero').length != 0 ) {
     $('.hero-holder').addClass('active');
-    $('.hero-slider-for').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
+    $('.hero-slider').slick({
       fade: true,
-      asNavFor: '.hero-slider-nav'
-    });
-    $('.hero-slider-nav').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      centerPadding: '0px',
-      asNavFor: '.hero-slider-for',
-      dots: false,
-      centerMode: true,
-      focusOnSelect: true,
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
       autoplay: false,
-      responsive: [
-        {
-          breakpoint: 640,
-          settings: {
-            slidesToShow: 3,
-          }
-        }
-      ]
+      adaptiveHeight: true
     });
   }
 

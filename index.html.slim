@@ -19,7 +19,7 @@
 /! 首頁 slider 區塊 start
 .hero
   .hero-holder
-    .hero-slider-for
+    .hero-slider
       - 9.times do |i|
         a.hero-photo href="/activities/travel-intro.html"
           .hero-photo-inner
@@ -28,14 +28,9 @@
           .hero-content
             .title 澄金秋彩紐西蘭南島攝影漫遊
             .date 2015/05/0#{i+1}
-            p 由已有50年以上成功歷史的美國白鹿青少年領導訓練營精心打造，以七天的領導力訓練課程為活動主軸
+            p 由已有50年以上成功歷史的美國白鹿青少年領導訓練營精心打造，以七天的領導力訓練課程為活動主軸，透過實地任務，團體、分組作戰等遊戲環節，在反覆演練中挖掘並激發孩子潛在的領導力
           /! 圖片文字浮水印區塊 end
-    .hero-slider-nav-wrap
-      .hero-slider-nav
-        - 9.times do |i|
-          .hero-photo
-            .hero-photo-inner
-              img src="/images/hero-photo/slider-#{i+1}.jpg"
+
 /! 首頁 slider 區塊 end
 /! 旅程分類 start
 .itinerary-type
@@ -70,7 +65,7 @@
   a.type-item href="/activities/"
     / img.icon src="/images/icon/icon-item-camp.svg"
     img.icon src="http://placehold.it/64/64"
-    .name 主題營隊
+    .name 海外遊學
 
   a.type-item href="/activities/"
     img.icon src="/images/icon/icon-item-speech.svg"
