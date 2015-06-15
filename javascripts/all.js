@@ -19,14 +19,21 @@ $(function(){
     $(this).toggleClass('active');
   });
 
-  $('.record-photo-wrap').magnificPopup({
-    type:'image',
-    removalDelay: 300,
-    mainClass: 'mfp-fade',
-    gallery: {
-      enabled: true
-    }
-  });
+  if ( $('.record-photo-wrap').length != 0 ) {
+    $('.record-photo-wrap').magnificPopup({
+      type:'image',
+      preloader: true,
+      removalDelay: 300,
+      mainClass: 'mfp-fade',
+      gallery: {
+        enabled: true,
+        callbacks: {
+          open: setInterval(function() { $.magnificPopup.instance.next(); }, 5000)
+        }
+      }
+    });
+  }
+
 
   $('.option').on('click', function(){
     $(this).toggleClass('active');
