@@ -20,7 +20,7 @@
 .hero
   .hero-holder
     .hero-slider
-      - 9.times do |i|
+      - 5.times do |i|
         a.hero-photo href="/activities/travel-intro.html"
           .hero-photo-inner
             img.hero-photo-img src="/images/hero-photo/slider-#{i+1}.jpg"
@@ -75,12 +75,12 @@
   - 6.times do |i|
     /! 首頁單一旅程區塊 start
     a.travel-item href="/activities/travel-intro.html"
-      .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg" id="travel-photo-img-#{i+1}" onload='loaded(this.id)'
+      / .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg" id="travel-photo-img-#{i+1}" onload='loaded(this.id)'
+      .travel-photo: img.travel-photo-img src="/images/hero-photo/slider-#{i+1}.jpg" id="travel-photo-img-#{i+1}"
       .travel-info-wrap
         .info-background style="background-image: url('/images/hero-photo/slider-#{i+1}-blur.jpg')"
         .info-mask
         .travel-info
-          .badge
           h2.title 澄金秋彩紐西蘭南島攝影漫遊
           .date 2015/05/23
           .type: img src="#{travel_types_wt[rand(7)]}"
@@ -112,7 +112,6 @@
           .record-info
             .type: img src="#{travel_types_wt[rand(7)]}"
             h3.title 澄金秋彩紐西蘭南島攝影漫遊
-            .date 2015/05/23
       /! 首頁單一活動集錦小區塊 end
 
 .fb-page
