@@ -58,7 +58,6 @@
 
   .slick-prev, .slick-next
     display: block
-    padding: 96px 12px
     font-size: 0
     line-height: 0
     cursor: pointer
@@ -73,7 +72,7 @@
       outline: none
 
       &:before
-        opacity: .75
+        opacity: 1
 
     &.slick-disabled:before
       opacity: .25
@@ -89,19 +88,23 @@
 
   .slick-prev
     position: absolute
-    left: 0
-    bottom: 0
+    left: calc(50% - 100px)
+    bottom: 15px
 
     &:before
-      content: '←'
+      content: ""
+      position: absolute
+      +replace-text-with-svg("slider-prev")
 
   .slick-next
     position: absolute
-    right: 0
-    bottom: 0
+    right: calc(50% - 100px)
+    bottom: 15px
 
     &:before
-      content: '→'
+      content: ""
+      position: absolute
+      +replace-text-with-svg("slider-next")
 
   .slick-dots
     margin: 0 0 36px 0
@@ -167,8 +170,6 @@
         .date, p
           +adjust-font-size-to(16px)
 
-    .slick-prev, .slick-next
-      padding: 96px 36px
 
   +at-breakpoint($desktop)
     .hero-slider
