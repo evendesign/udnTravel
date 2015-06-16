@@ -1,9 +1,9 @@
-@font-face
-  font-family: 'slick'
-  font-weight: normal
-  font-style: normal
-  src: url('/vender/slick/fonts/slick.eot')
-  src: url('/vender/slick/fonts/slick.eot?#iefix') format('embedded-opentype'), url('/vender/slick/fonts/slick.woff') format('woff'), url('/vender/slick/fonts/slick.ttf') format('truetype'), url('/vender/slick/fonts/slick.svg#slick') format('svg')
+// @font-face
+//   font-family: 'slick'
+//   font-weight: normal
+//   font-style: normal
+//   src: url('/vender/slick/fonts/slick.eot')
+//   src: url('/vender/slick/fonts/slick.eot?#iefix') format('embedded-opentype'), url('/vender/slick/fonts/slick.woff') format('woff'), url('/vender/slick/fonts/slick.ttf') format('truetype'), url('/vender/slick/fonts/slick.svg#slick') format('svg')
 
 .hero
 
@@ -25,7 +25,7 @@
     .hero-content
       position: relative
       margin-top: 0
-      padding: 48px 24px 12px
+      padding: 36px 24px 12px
       color: $color-black
       font-weight: bold
       background-color: white
@@ -38,7 +38,7 @@
         +adjust-font-size-to(13px, .75)
 
       .date
-        +trailer(.5)
+        +trailer(.25)
 
       p
         margin: 0 auto
@@ -57,7 +57,11 @@
       height: auto
 
   .slick-prev, .slick-next
-    display: block
+    position: absolute
+    bottom: 2px
+    width: 10px
+    height: 16px
+    padding: 0
     font-size: 0
     line-height: 0
     cursor: pointer
@@ -78,32 +82,28 @@
       opacity: .25
 
     &:before
-      font-family: 'slick'
-      font-size: 20px
-      line-height: 1
-      color: black
       opacity: .5
       -webkit-font-smoothing: antialiased
       -moz-osx-font-smoothing: grayscale
 
   .slick-prev
-    position: absolute
     left: calc(50% - 100px)
-    bottom: 15px
 
     &:before
       content: ""
       position: absolute
+      top: 0
+      left: 0
       +replace-text-with-svg("slider-prev")
 
   .slick-next
-    position: absolute
     right: calc(50% - 100px)
-    bottom: 15px
 
     &:before
       content: ""
       position: absolute
+      top: 0
+      left: 0
       +replace-text-with-svg("slider-next")
 
   .slick-dots
@@ -114,6 +114,7 @@
     li
       position: relative
       display: inline-block
+      vertical-align: middle
       width: 20px
       height: 20px
       cursor: pointer
@@ -139,17 +140,15 @@
           opacity: 1
 
       &:before
-        content: "•"
+        content: ""
         position: absolute
-        top: 0
-        left: 0
+        top: 6px
+        left: -1px
         margin: 0 7px
-        font-family: 'slick'
-        font-size: 6px
-        line-height: 20px
         text-align: center
         opacity: .25
-        color: black
+        border: 4px solid black
+        +border-radius(50%)
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
 
@@ -168,10 +167,16 @@
           +adjust-font-size-to(28px)
 
         .date, p
-          +adjust-font-size-to(16px)
+          +adjust-font-size-to(15px, .9)
 
 
   +at-breakpoint($desktop)
     .hero-slider
+      .hero-photo-inner
+        padding-top: 56.25%
+
+        img
+          top: -15.5%
+
       .hero-content
         margin-top: -128px
