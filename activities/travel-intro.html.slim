@@ -83,6 +83,13 @@
         a.btn href="#" 下載完整旅程內容
     .extra-link 本旅程有開設相關講座，<a href="/talk/talk-intro.html">請點此前往</a>。
   /! 旅程總覽 end
+  /! 旅程影音 start
+  .travel-video
+    h2.block-title 旅程影音
+    .video-wrap
+      iframe src="https://www.youtube.com/embed/jyggDdy0kas" frameborder="0"
+    p.video-description = zh_lorem_paragraphs 2
+  /! 旅程影音 end
   /! 旅程亮點 start
   .travel-highlight
     h2.block-title 旅程亮點
@@ -90,7 +97,7 @@
       .highlight-item
         .highlight-photo-wrap
           img.highlight-photo src="/images/hero-photo/slider-#{i+1}.jpg"
-        .highlight-description = zh_lorem_paragraphs 3
+        p.highlight-description = zh_lorem_paragraphs 3
   /! 旅程亮點 end
   /! 活動集錦（若無資料則整塊消失） start
   .travel-related-item

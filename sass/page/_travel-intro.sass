@@ -114,23 +114,25 @@
         font-weight: bold
         text-decoration: underline
 
-  .travel-record-photo, .travel-highlight, .travel-related-item, .travel-related-link
+  .travel-record-photo, .travel-video, .travel-highlight, .travel-related-item, .travel-related-link
     @extend %container
     +rhythm(2,0,0,2)
     max-width: 960px
 
-  .travel-highlight
-    .highlight-item
-      .highlight-photo-wrap
-        position: relative
-        overflow: hidden
-        +trailer(.25)
-        padding-top: 66.5625%
+  .travel-video
+    .video-wrap
+      position: relative
+      padding-top: 56.25%
+      overflow: hidden
 
-        .highlight-photo
-          position: absolute
-          top: 0
+      iframe
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
 
+    .video-description
+      +leader(.5)
 
   .travel-related-item
 
@@ -197,7 +199,15 @@
       &:last-child
         +trailer(0)
 
+      .highlight-photo-wrap
+        position: relative
+        overflow: hidden
+        +trailer(.25)
+        padding-top: 66.5625%
+
       .highlight-photo
+        position: absolute
+        top: 0
         +trailer()
 
       .highlight-description
@@ -249,6 +259,12 @@
     .travel-record-photo
       .record-photo-wrap
         width: 25%
+
+    .travel-video
+      .video-description
+        +leader(1)
+        padding: 0 24px
+        +adjust-font-size-to(18px, 1.2)
 
     .travel-highlight
       .highlight-item
