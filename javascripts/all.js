@@ -1,4 +1,4 @@
-$(function(){
+$( document ).ready(function() {
   if ( $('.hero').length != 0 ) {
     $('.hero-holder').addClass('active');
     $('.hero-slider').slick({
