@@ -333,9 +333,9 @@ label.form-row { display: block; }
 .hero .slick-prev.slick-disabled:before, .hero .slick-next.slick-disabled:before { opacity: 0.25; }
 .hero .slick-prev:before, .hero .slick-next:before { opacity: 0.5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .hero .slick-prev { left: calc(50% - 100px); }
-.hero .slick-prev:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/slider-prev.png?1434032687'); background-repeat: no-repeat; background-position: 50% 50%; width: 10px; height: 16px; background-image: none, url('/images/slider-prev.svg?1434032687'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hero .slick-prev:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/slider-prev.png?1434459961'); background-repeat: no-repeat; background-position: 50% 50%; width: 10px; height: 16px; background-image: none, url('/images/slider-prev.svg?1434459961'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .hero .slick-next { right: calc(50% - 100px); }
-.hero .slick-next:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/slider-next.png?1434032735'); background-repeat: no-repeat; background-position: 50% 50%; width: 10px; height: 16px; background-image: none, url('/images/slider-next.svg?1434032735'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.hero .slick-next:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/slider-next.png?1434459961'); background-repeat: no-repeat; background-position: 50% 50%; width: 10px; height: 16px; background-image: none, url('/images/slider-next.svg?1434459961'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .hero .slick-dots { margin: 0 0 36px 0; padding: 0; list-style: none; }
 .hero .slick-dots li { position: relative; display: inline-block; vertical-align: middle; width: 20px; height: 20px; cursor: pointer; }
 .hero .slick-dots button { margin: 0; padding: 0; border: 0; display: block; font-size: 0; line-height: 0; width: 20px; height: 20px; padding: 5px; cursor: pointer; color: transparent; background: transparent; border: none; outline: none; }
@@ -557,7 +557,7 @@ label.form-row { display: block; }
 .travel-intro .travel-highlight .highlight-item:last-child { margin-bottom: 0px; }
 .travel-intro .travel-highlight .highlight-item .highlight-photo-wrap { position: relative; overflow: hidden; margin-bottom: 6px; padding-top: 66.5625%; }
 .travel-intro .travel-highlight .highlight-item .highlight-photo { position: absolute; top: 0; margin-bottom: 24px; }
-.travel-intro .travel-highlight .highlight-item .highlight-description { font-size: 16px; line-height: 24px; }
+.travel-intro .travel-highlight .highlight-item .highlight-description { margin-bottom: 0px; font-size: 16px; line-height: 24px; }
 .travel-intro #flight { overflow-x: auto; }
 @media (min-width: 47em) { .travel-intro .travel-record-photo, .travel-intro .travel-highlight, .travel-intro .travel-related-item, .travel-intro .travel-related-link { margin-top: 96px; padding-top: 0px; padding-bottom: 0px; margin-bottom: 96px; }
   .travel-intro .travel-record-photo .record-photo-wrap { width: 33.333%; }
