@@ -386,7 +386,7 @@ label.form-row { display: block; }
 .travel-item .travel-photo { position: relative; overflow: hidden; padding-top: 66.5%; }
 .travel-item .travel-photo img { position: absolute; top: 0; display: block; width: 100%; }
 .travel-item .travel-info-wrap { position: relative; overflow: hidden; }
-.travel-item .info-background { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-position: center center; }
+.travel-item .info-background { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-position: center center; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .travel-item .info-mask { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255, 255, 255, 0.1); background-image: url("/images/travel-bg-noise.png"); background-repeat: repeat; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
 .travel-item .travel-info { position: relative; z-index: 10; padding: 48px 1em; text-align: center; color: white; }
 .travel-item .title { font-size: 18px; line-height: 24px; }
