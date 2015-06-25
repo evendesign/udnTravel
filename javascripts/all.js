@@ -6,8 +6,8 @@ $( document ).ready(function() {
       dots: true,
       infinite: true,
       slidesToShow: 1,
-      autoplay: false,
-      adaptiveHeight: true
+      autoplay: true,
+      autoplaySpeed: 5000
     });
   }
 

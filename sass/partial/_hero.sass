@@ -87,6 +87,7 @@
       -moz-osx-font-smoothing: grayscale
 
   .slick-prev
+    left: -webkit-calc(50% - 100px)
     left: calc(50% - 100px)
 
     &:before
@@ -97,6 +98,7 @@
       +replace-text-with-svg("slider-prev")
 
   .slick-next
+    right: -webkit-calc(50% - 100px)
     right: calc(50% - 100px)
 
     &:before
@@ -179,4 +181,4 @@
           top: -15.5%
 
       .hero-content
-        margin-top: -128px
+        margin-top: -120px
