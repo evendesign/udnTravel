@@ -87,8 +87,8 @@
       -moz-osx-font-smoothing: grayscale
 
   .slick-prev
-    left: -webkit-calc(50% - 100px)
-    left: calc(50% - 100px)
+    left: 50%
+    margin-left: -100px
 
     &:before
       content: ""
@@ -98,8 +98,8 @@
       +replace-text-with-svg("slider-prev")
 
   .slick-next
-    right: -webkit-calc(50% - 100px)
-    right: calc(50% - 100px)
+    right: 50%
+    margin-right: -100px
 
     &:before
       content: ""

@@ -297,7 +297,7 @@ label.form-row { display: block; }
 .header .nav:after { content: ""; display: table; clear: both; }
 .header .nav a { color: #333333; display: block; margin-top: 0px; padding-top: 12px; padding-bottom: 12px; margin-bottom: 0px; font-weight: bold; text-decoration: none; border-top: 1px solid #f2f2f2; -webkit-transition: color 0.1s; -moz-transition: color 0.1s; -o-transition: color 0.1s; transition: color 0.1s; }
 .header .nav a:hover { color: #2c6382; }
-@media (min-width: 47em) { .header .logo { margin-top: 12px; padding-top: 0px; padding-bottom: 0px; margin-bottom: 24px; }
+@media (min-width: 47em) { .header .logo a { margin-top: 12px; padding-top: 0px; padding-bottom: 0px; margin-bottom: 24px; }
   .header .menu-btn { display: none; }
   .header .nav { margin: 0; }
   .header .nav:after { content: ""; display: table; clear: both; }
@@ -333,9 +333,9 @@ label.form-row { display: block; }
 .hero .slick-prev:hover:before, .hero .slick-prev:focus:before, .hero .slick-next:hover:before, .hero .slick-next:focus:before { opacity: 1; }
 .hero .slick-prev.slick-disabled:before, .hero .slick-next.slick-disabled:before { opacity: 0.25; }
 .hero .slick-prev:before, .hero .slick-next:before { opacity: 0.5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-.hero .slick-prev { left: -webkit-calc(50% - 100px); left: calc(50% - 100px); }
+.hero .slick-prev { left: 50%; margin-left: -100px; }
 .hero .slick-prev:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/slider-prev.png?1434459961'); background-repeat: no-repeat; background-position: 50% 50%; width: 10px; height: 16px; background-image: none, url('/images/slider-prev.svg?1434459961'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.hero .slick-next { right: -webkit-calc(50% - 100px); right: calc(50% - 100px); }
+.hero .slick-next { right: 50%; margin-right: -100px; }
 .hero .slick-next:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/slider-next.png?1434459961'); background-repeat: no-repeat; background-position: 50% 50%; width: 10px; height: 16px; background-image: none, url('/images/slider-next.svg?1434459961'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .hero .slick-dots { margin: 0 0 36px 0; padding: 0; list-style: none; }
 .hero .slick-dots li { position: relative; display: inline-block; vertical-align: middle; width: 20px; height: 20px; cursor: pointer; }
@@ -387,7 +387,7 @@ label.form-row { display: block; }
 .travel-item .travel-photo { position: relative; overflow: hidden; padding-top: 66.5%; }
 .travel-item .travel-photo img { position: absolute; top: 0; display: block; width: 100%; }
 .travel-item .travel-info-wrap { position: relative; overflow: hidden; }
-.travel-item .info-background { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-position: center center; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.travel-item .info-background { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-position: center center; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; -webkit-background-size: 250%; -moz-background-size: 250%; -o-background-size: 250%; background-size: 250%; }
 .travel-item .info-mask { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255, 255, 255, 0.1); background-image: url("/images/travel-bg-noise.png"); background-repeat: repeat; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
 .travel-item .travel-info { position: relative; z-index: 10; padding: 48px 1em; text-align: center; color: white; }
 .travel-item .title { font-size: 18px; line-height: 24px; }
@@ -405,7 +405,7 @@ label.form-row { display: block; }
   .travel-item .date { font-size: 13px; line-height: 24px; }
   .travel-item .description { font-size: 15px; line-height: 24px; } }
 @media (min-width: 71em) { .travel-item .travel-photo { float: left; width: 60%; padding-top: 39.5%; }
-  .travel-item .travel-info-wrap { overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; width: 40%; }
+  .travel-item .travel-info-wrap { overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; width: 40.5%; }
   .travel-item .travel-info { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; top: 50%; width: 100%; padding: 0 48px; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); } }
 
 .badge { position: absolute; z-index: 20; top: 0; right: 0; width: 100px; height: 36px; cursor: pointer; }
