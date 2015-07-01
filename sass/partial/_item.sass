@@ -28,6 +28,7 @@
   .travel-info-wrap
     position: relative
     overflow: hidden
+    margin-top: -3px
 
   .info-background
     position: absolute
@@ -38,7 +39,6 @@
     background-position: center center
     background-repeat: no-repeat
     +background-size(cover)
-    +background-size(250%)
 
   .info-mask
     position: absolute
@@ -54,7 +54,7 @@
   .travel-info
     position: relative
     z-index: 10
-    padding: 48px 1em
+    padding: 30px 1em
     text-align: center
     color: white
 
@@ -71,7 +71,7 @@
       display: block
       width: 48px
       height: 48px
-      margin: rhythm(.5) auto
+      margin: 0 auto
 
     &:before, &:after
       content: ""
@@ -89,7 +89,15 @@
       right: 0
 
   .description
+    +trailer(.5)
     +adjust-font-size-to(13px, .75)
+
+  .message
+    margin: 24px
+    font-weight: bold
+
+    a
+      color: #8EE3FF
 
   .btn.enter
     +inline-block()
@@ -106,10 +114,14 @@
     .title
       +adjust-font-size-to(24px, 1.5)
 
+    .type img
+      margin: rhythm(.5) auto
+
     .date
       +adjust-font-size-to(13px)
 
     .description
+      +trailer()
       +adjust-font-size-to(15px)
 
 
@@ -122,6 +134,7 @@
     .travel-info-wrap
       overflow: hidden
       position: absolute
+      margin-top: 0
       top: 0
       right: 0
       bottom: 0

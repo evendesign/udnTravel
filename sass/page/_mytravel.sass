@@ -5,12 +5,18 @@
 
   .update-log
     +pie-clearfix
+    height: 36px
     margin: -6px 6px 6px
     text-align: center
     +adjust-font-size-to(13px, 1.5)
     font-weight: bold
     color: white
     background-color: #565151
+
+    &:empty
+      &:before
+        content: "尚無最新消息"
+        color: $color-white-a35
 
     .title
       background-color: $color-black-a10
@@ -57,7 +63,6 @@
 
     .update-log
       text-align: center
-      padding: 3px 12px
       +ellipsis
 
     .update-log
