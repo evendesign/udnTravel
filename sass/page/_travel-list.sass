@@ -12,6 +12,9 @@
           width: 32px
           height: 32px
 
+      .travel-item .message
+        margin: 0
+
 
   +at-breakpoint($pad)
     .travel-list-item
@@ -20,10 +23,29 @@
       width: 50%
       padding: 6px
 
+      &:nth-child(2n+1)
+        clear: left
+
+      .travel-info-wrap
+        min-height: 180px
+        position: relative
+
+      .travel-info
+        +box-sizing(border-box)
+        position: absolute
+        top: 50%
+        width: 100%
+        padding: 48px 72px
+        +translateY(-50%)
+
       .travel-item
         margin: 0
 
   +at-breakpoint($desktop)
+    .travel-list-item
+      .travel-info-wrap
+        position: absolute
+
     .travel-list-inner
       margin: 0 -6px
 
